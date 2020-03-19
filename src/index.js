@@ -1,7 +1,7 @@
 import ReactDOM from "react-dom";
 import React from "react";
 import App from "./App";
-import Home from "./components/Home";
+import Home from "./Home";
 
 import rootReducer from './store/reducers';
 import {Provider} from 'react-redux';
