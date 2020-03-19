@@ -26,7 +26,7 @@ export default class Canvas extends React.Component{
         c.fill();
 
 
-        // this.props.hitCanvas([x, y, this.props.r]);
+        this.props.hitCanvas([x, y, this.props.r]);
         this.sendCoordinates("куда то ")
 
     }
