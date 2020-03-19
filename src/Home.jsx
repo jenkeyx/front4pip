@@ -1,12 +1,13 @@
 import React from "react";
 import CanvasContainer from "./components/CanvasContainer";
-import RegistrationContainer from "./components/RegistrationContainer";
+import FormContainer from "./components/FormContainer";
 
 export default class Home extends React.Component {
     render() {
         return(
             <div>
                 <CanvasContainer/>
+                <FormContainer/>
             </div>
 
         )

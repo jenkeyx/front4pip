@@ -1,6 +1,6 @@
 import React from "react";
 import Canvas from "./Canvas";
-import {hitCanvas} from "../store/canvas/actions";
+//import {hitCanvas} from "../store/canvas/actions";
 import {connect} from "react-redux";
 
 class CanvasContainer extends React.Component{
@@ -15,12 +15,12 @@ class CanvasContainer extends React.Component{
 
 const mapStateToProps = state =>{
     return{
-        x: state.canvas.coordinates[0],
-        y: state.canvas.coordinates[1],
-        r: state.canvas.coordinates[2]
+        x: state.form.x,
+        y: state.form.y,
+        r: state.form.r
     }
 };
 const mapDispatchToProps = {
-    hitCanvas: hitCanvas(),
+    //hitCanvas: hitCanvas(),
 };
 export default connect(mapStateToProps,mapDispatchToProps)(CanvasContainer);
