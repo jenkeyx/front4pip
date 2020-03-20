@@ -6,7 +6,7 @@ import Auth from "./Auth";
 class AuthContainer extends React.Component{
     render() {
         return <Auth username={this.props.username}  password={this.props.password} authStatus={this.props.authStatus}
-                     setUsername={this.props.setUsername} setPassword={this.props.setPassword} setAuthStatus={this.props.authStatus}/>
+                     setUsername={this.props.setUsername} setPassword={this.props.setPassword} setAuthStatus={this.props.setAuthStatus}/>
     }
 }
 

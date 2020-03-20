@@ -17,7 +17,7 @@ class App extends React.Component {
         return (
             <Router history={createBrowserHistory()}>
                 <Route exact path='/welcome' component={Welcome}/>
-                <Route path='/home' component={Home}/>
+                <Route strict path='/home' component={Home}/>
                 {this.props.auth.authStatus && <Redirect to={'/home'}/>}
                 {(!this.props.auth.authStatus) && <Redirect to={'/welcome'}/>}
 

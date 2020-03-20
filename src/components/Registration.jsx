@@ -6,7 +6,8 @@ export default class Registration extends React.Component{
         super(props);
         this.onUsernameChange = this.onUsernameChange.bind(this);
         this.onPasswordChange = this.onPasswordChange.bind(this);
-        this.onPasswordRepeatChange = this.onPasswordRepeatChange.bind(this)
+        this.onPasswordRepeatChange = this.onPasswordRepeatChange.bind(this);
+        this.handleRegistration = this.handleRegistration.bind(this)
     }
 
     onUsernameChange(event){
@@ -19,6 +20,21 @@ export default class Registration extends React.Component{
     onPasswordRepeatChange(event){
         this.props.setRepeatPassword(event.target.value)
     }
+
+    handleRegistration(){
+        const data = this.getData();
+        fetch("/registration",{
+            method: "POST",
+            body: JSON.stringify(data),
+            headers: new Headers({"Content-type":"application/json"})
+        })
+            .then(response =>{if (response.status === 200) {
+                this.props.setAuthStatus(true);
+                console.log("OK!")
+            }
+            })
+    }
+
     render() {
         return(
             <div className="registration">
@@ -34,11 +50,18 @@ export default class Registration extends React.Component{
                         <input type="password" name="repeatPassword" placeholder="repeatPassword" value={this.props.repeatPassword} onChange={this.onPasswordRepeatChange}/>
                     </div>
                     <div>
-                        <button>Sign In</button>
+                        <button type="button" onClick={this.handleRegistration}>Sign In</button>
                     </div>
                 </form>
             </div>
         )
+    }
+    getData(){
+        return{
+            username: this.props.username,
+            password: this.props.password,
+            repeatPassword: this.props.repeatPassword
+        }
     }
 
 }

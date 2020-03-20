@@ -17,14 +17,17 @@ export default class Auth extends React.Component{
         this.props.setPassword(event.target.value)
     }
 
-    handleAuth(url){
+    handleAuth(){
         const data = this.getData();
-        fetch(url,{
+        fetch("/logging",{
             method: "POST",
             body: data,
             headers: new Headers({"Authorization": 'Basic' + btoa(data.username +  ":" + data.password) })
         })
-            .then(response =>{if (response.status === 200) this.props.setAuthStatus(true)})
+            .then(response =>{if (response.status === 200) {
+                this.props.setAuthStatus(true);
+            }
+            })
     }
     render() {
         return(
@@ -38,7 +41,7 @@ export default class Auth extends React.Component{
                         <input type="password" name="password" placeholder="password" value={this.props.password} onChange={this.onPasswordChange}/>
                     </div>
                     <div>
-                        <button onClick={this.handleAuth}>Sign In</button>
+                        <button type="button" onClick={this.handleAuth}>Sign In</button>
                     </div>
                 </form>
             </div>
