@@ -21,7 +21,6 @@ export default class Auth extends React.Component{
         const data = this.getData();
         fetch("/logging",{
             method: "POST",
-            body: data,
             headers: new Headers({"Authorization": 'Basic' + btoa(data.username +  ":" + data.password) })
         })
             .then(response =>{if (response.status === 200) {

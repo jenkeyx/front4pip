@@ -1,17 +1,18 @@
 import React from "react";
 
-export default class Canvas extends React.Component{
+export default class Canvas extends React.Component {
 
     constructor(props) {
         super(props);
         this.onHitCanvas = this.onHitCanvas.bind(this);
 
     }
+
     componentDidMount() {
         this.drawGraphic(this.props.r);
     }
 
-    onHitCanvas(event){
+    onHitCanvas(event) {
 
         let rect = this.refs.canvas.getBoundingClientRect();
         let c = this.refs.canvas.getContext("2d");
@@ -25,35 +26,51 @@ export default class Canvas extends React.Component{
         c.arc(click_x, click_y, 1.5, 0, Math.PI * 2);
         c.fill();
 
-
         this.props.hitCanvas([x, y, this.props.r]);
-        this.sendCoordinates("куда то ")
+        this.sendCoordinates()
 
     }
-    sendCoordinates(url){
+
+    sendCoordinates() {
         const coordinates = this.getCoordinates();
-        fetch(url,{
+        const authData = this.getAuthData();
+        console.log(authData);
+        console.log(coordinates);
+        fetch("/dots", {
             method: "POST",
-            body: coordinates,
-            headers: new Headers({"Coordinates": 'Basic' + btoa(coordinates.x +  ":" + coordinates.y + ":" + coordinates.r) })
+            body: JSON.stringify(coordinates),
+            headers: new Headers({
+                'Content-type': "application/json",
+                'Authorization': "Basic" + btoa(authData.username + ":" + authData.password)
+            })
         })
-            .then(response =>{if (response.status === 200) this.props.hitCanvas([this.props.x, this.props.y, this.props.r]);})
+            .then(response => {
+                if (response.status === 200) this.props.hitCanvas([this.props.x, this.props.y, this.props.r]);
+            })
     }
+
     render() {
-        return(
+        return (
             <div className="canvas">
-                <canvas width="400" height="400" ref='canvas' onClick={event => this.onHitCanvas(event)}>
+                <canvas width="400" height="400" ref='canvas' onClick={this.onHitCanvas}>
                     Здесь должен был быть Canvas, но ваш браузер его не поддерживает.
                 </canvas>
             </div>
         )
     }
 
-    getCoordinates(){
-        return{
+    getCoordinates() {
+        return {
             x: this.props.x,
             y: this.props.y,
             r: this.props.r
+        }
+    }
+
+    getAuthData() {
+        return {
+            username: this.props.username,
+            password: this.props.password
         }
     }
 
@@ -68,14 +85,14 @@ export default class Canvas extends React.Component{
         //2part
         c.fillStyle = "#99CCFF";
         c.beginPath();
-        c.fillRect(width / 2 - shiftRadius/2, height / 2 - shiftRadius, shiftRadius/2, shiftRadius);
+        c.fillRect(width / 2 - shiftRadius / 2, height / 2 - shiftRadius, shiftRadius / 2, shiftRadius);
 
 // 1part circle of 3 part r= r/2
         c.beginPath();
         c.moveTo(width / 2 + shiftRadius, height / 2);
         c.lineTo(width / 2, height / 2);
         c.lineTo(width / 2, height / 2 - shiftRadius);
-        c.arc(width / 2, height / 2, shiftRadius, Math.PI * 1.5, Math.PI * 0);
+        c.arc(width / 2, height / 2, shiftRadius, Math.PI * 1.5, 0);
         c.closePath();
         c.fill();
 
@@ -142,7 +159,7 @@ export default class Canvas extends React.Component{
     }
 
     checkArea(x, y, r) {
-        return (x <= 0 && y >= 0 && x >= -r/2 && y <= r) ||
+        return (x <= 0 && y >= 0 && x >= -r / 2 && y <= r) ||
             (x <= 0 && y <= 0 && y >= -x - r / 2) ||
             (x >= 0 && y >= 0 && r * r >= x * x + y * y);
     }

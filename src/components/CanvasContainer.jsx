@@ -6,8 +6,8 @@ import {connect} from "react-redux";
 class CanvasContainer extends React.Component{
     render() {
         return <Canvas
-            x={this.props.x}  y={this.props.y}
-            r ={this.props.r}
+            x={this.props.x}  y={this.props.y} r ={this.props.r}
+            username={this.props.username} password={this.props.password}
             hitCanvas={this.props.hitCanvas}
             />
     }
@@ -17,7 +17,9 @@ const mapStateToProps = state =>{
     return{
         x: state.form.x,
         y: state.form.y,
-        r: state.form.r
+        r: state.form.r,
+        username: state.auth.username,
+        password: state.auth.password
     }
 };
 const mapDispatchToProps = {

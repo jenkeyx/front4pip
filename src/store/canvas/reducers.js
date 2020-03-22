@@ -1,6 +1,8 @@
 import {CANVAS_ON_HIT} from "./actions";
 
 const initialState = {
+    username: "",
+    password:"",
     coordinates: [0,0,1]
 };
 

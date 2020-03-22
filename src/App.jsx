@@ -1,7 +1,6 @@
 import React from "react";
 
-import {createBrowserHistory} from "history";
-import {Route, Router} from "react-router-dom";
+import {BrowserRouter, Route} from "react-router-dom";
 import Home from "./components/Home";
 import Welcome from "./components/Welcome";
 import {Redirect} from "react-router";
@@ -15,14 +14,12 @@ class App extends React.Component {
 
     render() {
         return (
-            <Router history={createBrowserHistory()}>
+            <BrowserRouter>
                 <Route exact path='/welcome' component={Welcome}/>
                 <Route strict path='/home' component={Home}/>
                 {this.props.auth.authStatus && <Redirect to={'/home'}/>}
                 {(!this.props.auth.authStatus) && <Redirect to={'/welcome'}/>}
-
-            </Router>
-
+            </BrowserRouter>
         )
     }
 }
@@ -33,9 +30,9 @@ const mapStateToProps = state => {
         auth: state.auth
     }
 };
-const mapDispatchToProps = dispatch => {
+/*const mapDispatchToProps = dispatch => {
 
-};
+};*/
 export default connect(mapStateToProps, mapDispatchToProps,)(App)
 
 
