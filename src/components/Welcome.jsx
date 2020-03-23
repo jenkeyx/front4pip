@@ -5,7 +5,7 @@ import RegistrationContainer from "./RegistrationContainer";
 export default class Welcome extends React.Component {
     render() {
         return(
-            <div className="forms">
+            <div>
                 <AuthContainer/>
                 <RegistrationContainer/>
             </div>

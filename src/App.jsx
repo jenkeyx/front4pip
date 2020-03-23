@@ -16,7 +16,7 @@ class App extends React.Component {
         return (
             <BrowserRouter>
                 <Route exact path='/welcome' component={Welcome}/>
-                <Route strict path='/home' component={Home}/>
+                <Route path='/home' component={Home}/>
                 {this.props.auth.authStatus && <Redirect to={'/home'}/>}
                 {(!this.props.auth.authStatus) && <Redirect to={'/welcome'}/>}
             </BrowserRouter>
