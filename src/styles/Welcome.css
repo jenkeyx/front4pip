@@ -1,0 +1,54 @@
+#welcome{
+    margin-top: 100px;
+}
+
+form{
+    text-align: center;
+}
+input{
+    margin: 10px;
+    width: 300px;
+    height: 30px;
+    border-radius: 5px;
+    border: royalblue solid 1px;
+}
+button{
+    margin: 10px;
+    background-color: royalblue;
+    width: 305px;
+    height: 30px;
+    border-radius: 5px;
+    border: royalblue solid 3px;
+}
+button:hover{
+    background-color: cornflowerblue;
+}
+
+
+
+
+@media (max-width: 785px){
+    #welcome {
+        display: flex;
+        flex-direction: column;
+    }
+}
+@media (min-width: 786px) and (max-width: 1139px){
+    #welcome {
+        display: flex;
+        flex-direction: column;
+    }
+}
+@media (min-width: 1140px){
+    #welcome {
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+    }
+    .auth {
+        margin-left: 25%;
+    }
+    .registration {
+        margin-right: 25%;
+    }
+}

@@ -5,8 +5,9 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Auth.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Auth.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/AuthContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AuthContainer.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Registration.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Registration.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Welcome.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Welcome.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/Welcome.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/Welcome.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

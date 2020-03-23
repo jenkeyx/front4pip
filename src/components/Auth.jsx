@@ -31,8 +31,8 @@ export default class Auth extends React.Component{
     render() {
         return(
             <div className="auth">
-                <h3>Sign In</h3>
                 <form>
+                    <h3>Sign In</h3>
                     <div>
                         <input type="text" name="login" placeholder="username" value={this.props.username} onChange={this.onUsernameChange}/>
                     </div>
