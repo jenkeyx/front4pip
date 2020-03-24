@@ -1,0 +1,8 @@
+.table table{
+    border: royalblue solid 1px;
+    text-align: center;
+    width: 100%;
+}
+th{
+    color: royalblue;
+}

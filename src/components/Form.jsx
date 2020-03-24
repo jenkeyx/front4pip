@@ -1,5 +1,4 @@
 import React from "react";
-//import {InputText} from 'primereact/inputtext';
 
 export default class Form extends React.Component{
 
@@ -22,18 +21,19 @@ export default class Form extends React.Component{
     }
 
     onSubmitForm(url){
-        const data = this.getData();
-        fetch(url,{
-            method: "POST",
-            body: data,
-            headers: new Headers({"Authorization": 'Basic' + btoa(data.x +  ":" + data.y +  ":" + data.r) })
-        })
-            .then(response =>{if (response.status === 200) this.props.setAuthStatus(true)})
+        if (this.validate(this.props.x, this.props.y, this.props.r)) {
+            const data = this.getData();
+            fetch(url,{
+                method: "POST",
+                body: data,
+                headers: new Headers({"Authorization": 'Basic' + btoa(data.x +  ":" + data.y +  ":" + data.r) })
+            })
+                .then(response =>{if (response.status === 200) this.props.setAuthStatus(true)})
+        }
     }
     render() {
         return(
             <div className="auth">
-                <h3>Sign In</h3>
                 <form >
                     <fieldset>
                         <label>
@@ -96,4 +96,41 @@ export default class Form extends React.Component{
         }
     }
 
+    //todo fix bugs
+    validate(x, y, r) {
+        let isValid = true;
+        if (x === undefined) {
+            this.setErrorMsg('Вы не выбрали значение Х. Сделайте это.');
+            isValid = false;
+        } else if (x.match(/^[0-3](([.,]0+)|)$/) == null
+            && x.match(/^-[0-5](([.,]0+)|)$/) == null &&
+            x.match(/^[0-2][.,]\d+$/) == null &&
+            x.match(/^-[0-4][.,]\d+$/) == null) {
+            isValid = false;
+            this.setErrorMsg('Выбрано некорректное значение Х или не входящее в допустимый диапозон.<br/>Введите значение от -5 до 3.');
+        }
+        if (y === undefined) {
+            this.setErrorMsg('Вы не написали значение Y.');
+            isValid = false;
+        } else if (y.match(/^[0-3](([.,]0+)|)$/) == null
+            && y.match(/^-[0-5](([.,]0+)|)$/) == null &&
+            y.match(/^[0-2][.,]\d+$/) == null &&
+            y.match(/^-[0-4][.,]\d+$/) == null) {
+            isValid = false;
+            this.setErrorMsg('Выбрано некорректное значение Y или не входящее в допустимый диапозон.<br/>Введите значение от -5 до 3.');
+        }
+        if (r.match(/^[0-3](([.,]0+)|)$/) == null
+            && r.match(/^-[0-5](([.,]0+)|)$/) == null &&
+            r.match(/^[0-2][.,]\d+$/) == null &&
+            r.match(/^-[0-4][.,]\d+$/) == null) {
+            isValid = false;
+            this.setErrorMsg('Выбрано некорректное значение R или не входящее в допустимый диапозон.<br/>Введите значение от -5 до 3.');
+        }
+        return isValid;
+    }
+
+    setErrorMsg(message) {
+        let errorSpan = document.getElementById('errorSpan');
+        errorSpan.innerHTML = message;
+    }
 }

@@ -1,5 +1,7 @@
-#welcome{
-    margin-top: 100px;
+.header{
+    text-align: right;
+    margin-bottom: 100px;
+    color: grey;
 }
 
 form{

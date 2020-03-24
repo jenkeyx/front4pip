@@ -1,10 +1,11 @@
-import {FORM_CHANGE_X, FORM_CHANGE_Y, FORM_CHANGE_R} from "./actions";
-
+import {FORM_CHANGE_X, FORM_CHANGE_Y, FORM_CHANGE_R, SET_DOTS} from "./actions";
+import {Dot} from "../../classes/Dot"
 
 const initialState = {
     x : 0,
     y : 0,
-    r : 1
+    r : 1,
+    dots:[new Dot(1,1,1), new Dot(2, 2,2)] //test data
 };
 
 export const formReducer = (state = initialState,action) =>{
@@ -20,6 +21,10 @@ export const formReducer = (state = initialState,action) =>{
         case FORM_CHANGE_R:
             return {
                 ...state, r: action.payload
+            };
+        case SET_DOTS:
+            return {
+                ...state, dots: action.payload
             };
         default:
             return state
