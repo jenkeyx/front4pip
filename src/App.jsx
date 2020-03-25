@@ -11,15 +11,14 @@ class App extends React.Component {
     constructor(props) {
         super(props);
     }
-    //todo валидация + таблица
 
     render() {
         return (
             <BrowserRouter>
                 <Route exact path='/welcome' component={Welcome}/>
                 <Route path='/home' component={Home}/>
-                {this.props.auth.authStatus && <Redirect to={'/home'}/>}
-                {(!this.props.auth.authStatus) && <Redirect to={'/welcome'}/>}
+                {/*{this.props.auth.authStatus && <Redirect to={'/home'}/>}*/}
+                {/*{(!this.props.auth.authStatus) && <Redirect to={'/welcome'}/>}*/}
             </BrowserRouter>
         )
     }
@@ -31,9 +30,7 @@ const mapStateToProps = state => {
         auth: state.auth
     }
 };
-const mapDispatchToProps = dispatch => {
-
-};
-export default connect(mapStateToProps, mapDispatchToProps,)(App)
+const mapDispatchToProps = dispatch => {};
+export default connect(mapStateToProps, mapDispatchToProps)(App)
 
 

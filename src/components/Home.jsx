@@ -10,10 +10,14 @@ export default class Home extends React.Component {
         return(
             <div>
                 <Header/>
-                <CanvasContainer/>
-                <FormContainer/>
-                <Table/>
-                <ErrorMsg/>
+                <div id='wrapper'>
+                    <div>
+                        <CanvasContainer/>
+                        <FormContainer/>
+                    </div>
+                    <Table/>
+                </div>
+
             </div>
 
         )

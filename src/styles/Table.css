@@ -1,8 +1,15 @@
 .table table{
     border: royalblue solid 1px;
     text-align: center;
-    width: 100%;
+    width: 60%;
+    margin: 10px 20%;
 }
 th{
     color: royalblue;
+}
+@media (min-width: 1140px){
+    .table table{
+        width: 500px;
+
+    }
 }

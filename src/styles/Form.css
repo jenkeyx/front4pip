@@ -1,0 +1,30 @@
+.errorInput {
+    border: red solid 1px;
+}
+
+#errorSpan{
+    color: red;
+}
+
+#xInput, #yInput, #rInput {
+    width: 100px;
+    height: 20px;
+    border: royalblue solid 1px;
+    background-color: white;
+    margin: 0 10px;
+    padding: 0;
+}
+
+@media (max-width: 1139px){
+    #wrapper {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+    }
+}
+@media (min-width: 1140px){
+    #wrapper {
+        display: flex;
+        flex-direction: row;
+    }
+}

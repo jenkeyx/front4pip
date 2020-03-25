@@ -1,4 +1,6 @@
 import React from "react";
+import ErrorMsg from "./ErrorMsg";
+import "../styles/Form.css"
 
 export default class Form extends React.Component{
 
@@ -14,31 +16,33 @@ export default class Form extends React.Component{
         this.props.changeX(event.target.value)
     }
     onChangeY(event){
-        this.props.changeY(event.target.value)
+        this.setErrorMsg("");
+        document.getElementById('yInput').classList.remove("errorInput");
+        this.props.changeY(event.target.value);
+        this.validate(event.target.value)
     }
     onChangeR(event){
         this.props.changeR(event.target.value)
     }
 
     onSubmitForm(url){
-        if (this.validate(this.props.x, this.props.y, this.props.r)) {
-            const data = this.getData();
-            fetch(url,{
-                method: "POST",
-                body: data,
-                headers: new Headers({"Authorization": 'Basic' + btoa(data.x +  ":" + data.y +  ":" + data.r) })
-            })
-                .then(response =>{if (response.status === 200) this.props.setAuthStatus(true)})
-        }
+        const data = this.getData();
+        fetch(url,{
+            method: "POST",
+            body: data,
+            headers: new Headers({"Authorization": 'Basic' + btoa(data.x +  ":" + data.y +  ":" + data.r) })
+        })
+            .then(response =>{if (response.status === 200) this.props.setAuthStatus(true)})
+
     }
     render() {
         return(
-            <div className="auth">
+            <div className="form">
                 <form >
-                    <fieldset>
+
                         <label>
                             X:
-                            <select value={this.props.x} onChange={this.onChangeX}>
+                            <select id="xInput" value={this.props.x} onChange={this.onChangeX}>
                                 <option value="-5">-5</option>
                                 <option value="-4">-4</option>
                                 <option value="-3">-3</option>
@@ -56,12 +60,12 @@ export default class Form extends React.Component{
                             <input id="yInput" type="text" size="30"
                                        value={this.props.y}
                                        onChange={this.onChangeY}
-                                       placeholder={"-3 .. 5"}/>
+                                       placeholder={"-5 .. 3"}/>
                         </label>
 
                         <label>
                             R:
-                            <select value={this.props.r} onChange={this.onChangeR}>
+                            <select id="rInput" value={this.props.r} onChange={this.onChangeR}>
                                 <option value="-5">-5</option>
                                 <option value="-4">-4</option>
                                 <option value="-3">-3</option>
@@ -76,13 +80,13 @@ export default class Form extends React.Component{
                                 {this.props.r ? ' ' : 'Radius is not selected'}
                             </div>
                         </label>
+                        <ErrorMsg style={{color:'red'}}/><br/>
                         <button
-                            type="submit"
                             onClick={this.onSubmitForm}>
                             Check
                         </button>
 
-                    </fieldset>
+
                 </form>
             </div>
         )
@@ -97,39 +101,22 @@ export default class Form extends React.Component{
     }
 
     //todo fix bugs
-    validate(x, y, r) {
+    validate(y) {
         let isValid = true;
-        if (x === undefined) {
-            this.setErrorMsg('Вы не выбрали значение Х. Сделайте это.');
-            isValid = false;
-        } else if (x.match(/^[0-3](([.,]0+)|)$/) == null
-            && x.match(/^-[0-5](([.,]0+)|)$/) == null &&
-            x.match(/^[0-2][.,]\d+$/) == null &&
-            x.match(/^-[0-4][.,]\d+$/) == null) {
-            isValid = false;
-            this.setErrorMsg('Выбрано некорректное значение Х или не входящее в допустимый диапозон.<br/>Введите значение от -5 до 3.');
-        }
-        if (y === undefined) {
-            this.setErrorMsg('Вы не написали значение Y.');
-            isValid = false;
-        } else if (y.match(/^[0-3](([.,]0+)|)$/) == null
+        if (y === undefined || (y.match(/^[0-3](([.,]0+)|)$/) == null
             && y.match(/^-[0-5](([.,]0+)|)$/) == null &&
             y.match(/^[0-2][.,]\d+$/) == null &&
-            y.match(/^-[0-4][.,]\d+$/) == null) {
+            y.match(/^-[0-4][.,]\d+$/) == null)) {
             isValid = false;
-            this.setErrorMsg('Выбрано некорректное значение Y или не входящее в допустимый диапозон.<br/>Введите значение от -5 до 3.');
-        }
-        if (r.match(/^[0-3](([.,]0+)|)$/) == null
-            && r.match(/^-[0-5](([.,]0+)|)$/) == null &&
-            r.match(/^[0-2][.,]\d+$/) == null &&
-            r.match(/^-[0-4][.,]\d+$/) == null) {
-            isValid = false;
-            this.setErrorMsg('Выбрано некорректное значение R или не входящее в допустимый диапозон.<br/>Введите значение от -5 до 3.');
+            this.setErrorMsg('Введите значение от -5 до 3.');
+            document.getElementById('yInput').classList.add("errorInput");
+
         }
         return isValid;
     }
 
     setErrorMsg(message) {
+        console.log(message);
         let errorSpan = document.getElementById('errorSpan');
         errorSpan.innerHTML = message;
     }
