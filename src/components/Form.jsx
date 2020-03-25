@@ -25,12 +25,16 @@ export default class Form extends React.Component{
         this.props.changeR(event.target.value)
     }
 
-    onSubmitForm(url){
+    onSubmitForm(){
         const data = this.getData();
-        fetch(url,{
+        const authData = this.getAuthData();
+        fetch("/dots",{
             method: "POST",
-            body: data,
-            headers: new Headers({"Authorization": 'Basic' + btoa(data.x +  ":" + data.y +  ":" + data.r) })
+            body: JSON.stringify(data),
+            headers: new Headers({
+                "Content-type":"application/json",
+                "Authorization": 'Basic' + btoa(authData.username + ":" + authData.password)
+            })
         })
             .then(response =>{if (response.status === 200) this.props.setAuthStatus(true)})
 
@@ -81,8 +85,7 @@ export default class Form extends React.Component{
                             </div>
                         </label>
                         <ErrorMsg style={{color:'red'}}/><br/>
-                        <button
-                            onClick={this.onSubmitForm}>
+                        <button type="button" onClick={this.onSubmitForm}>
                             Check
                         </button>
 
@@ -97,6 +100,12 @@ export default class Form extends React.Component{
             x: this.props.x,
             y: this.props.y,
             r: this.props.r
+        }
+    }
+    getAuthData(){
+        return{
+            username: this.props.username,
+            password: this.props.password
         }
     }
 

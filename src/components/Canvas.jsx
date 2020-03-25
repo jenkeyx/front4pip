@@ -25,17 +25,15 @@ export default class Canvas extends React.Component {
         c.beginPath();
         c.arc(click_x, click_y, 1.5, 0, Math.PI * 2);
         c.fill();
-
-        this.props.hitCanvas([x, y, this.props.r]);
-        this.sendCoordinates()
+        this.props.hitCanvas({x:x, y:y, r: this.props.r});
+        this.sendCoordinates({x:x, y:y, r: this.props.r});
 
     }
 
-    sendCoordinates() {
-        const coordinates = this.getCoordinates();
+    sendCoordinates(coordinates) {
         const authData = this.getAuthData();
         console.log(authData);
-        console.log(coordinates);
+        console.log(JSON.stringify(coordinates));
         fetch("/dots", {
             method: "POST",
             body: JSON.stringify(coordinates),
