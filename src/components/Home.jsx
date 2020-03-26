@@ -4,6 +4,7 @@ import FormContainer from "./FormContainer";
 import Table from "./Table";
 import Header from "./Header";
 import {connect} from "react-redux";
+import {Redirect} from "react-router";
 
 class Home extends React.Component {
     constructor(props) {
@@ -12,20 +13,25 @@ class Home extends React.Component {
     }
 
     render() {
-        return(
-            <div>
-                <Header/>
-                <div id='wrapper'>
-                    <div>
-                        <CanvasContainer/>
-                        <FormContainer/>
+        if(this.props.authStatus){
+            return(
+                <div>
+                    <Header/>
+                    <div id='wrapper'>
+                        <div>
+                            <CanvasContainer/>
+                            <FormContainer/>
+                        </div>
+                        <Table/>
                     </div>
-                    <Table/>
+
                 </div>
 
-            </div>
+            )
+        }else{
+            return <Redirect to={'/welcome'}/>
+        }
 
-        )
     }
 }
 
