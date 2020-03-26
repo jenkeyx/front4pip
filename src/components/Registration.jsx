@@ -59,7 +59,7 @@ export default class Registration extends React.Component{
                     <div>
                         <button type="button" onClick={this.handleRegistration}>Sign In</button>
                     </div>
-                    <ErrorMsg/>
+                    <span className="errorMsg" id="errorRegSpan"> </span>
                 </form>
             </div>
         )
@@ -74,7 +74,7 @@ export default class Registration extends React.Component{
 
     setErrorMsg(message) {
         console.log(message);
-        let errorSpan = document.getElementById('errorSpan');
+        let errorSpan = document.getElementById('errorRegSpan');
         errorSpan.innerHTML = message;
     }
 }

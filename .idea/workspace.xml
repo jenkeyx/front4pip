@@ -3,14 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="dc205933-b750-497b-9b66-b24bb40ec484" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Auth.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Auth.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Home.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Home.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ErrorMsg.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ErrorMsg.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Registration.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Registration.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Table.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Table.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Welcome.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Welcome.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/RegistrationContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/RegistrationContainer.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/store/auth/reducers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/auth/reducers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/Form.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/Form.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -165,7 +162,14 @@
       <option name="project" value="LOCAL" />
       <updated>1585012000731</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="auth error msg">
+      <created>1585246545978</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1585246545978</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -190,7 +194,8 @@
     <MESSAGE value="form" />
     <MESSAGE value="welcome style" />
     <MESSAGE value="table + validation" />
-    <option name="LAST_COMMIT_MESSAGE" value="table + validation" />
+    <MESSAGE value="auth error msg" />
+    <option name="LAST_COMMIT_MESSAGE" value="auth error msg" />
   </component>
   <component name="WindowStateProjectService">
     <state x="440" y="190" key="#ESLint" timestamp="1584557452932">
@@ -217,11 +222,12 @@
       <screen x="0" y="23" width="1680" height="963" />
     </state>
     <state x="578" y="258" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1680.963@0.23.1680.963" timestamp="1582807448570" />
-    <state x="476" y="51" key="CommitChangelistDialog2" timestamp="1585012000579">
-      <screen x="0" y="23" width="1440" height="825" />
+    <state x="476" y="50" key="CommitChangelistDialog2" timestamp="1585246545664">
+      <screen x="0" y="23" width="1440" height="822" />
     </state>
     <state x="476" y="105" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1584659745297" />
     <state x="423" y="127" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1584643590214" />
+    <state x="476" y="50" key="CommitChangelistDialog2/0.23.1440.822@0.23.1440.822" timestamp="1585246545664" />
     <state x="476" y="51" key="CommitChangelistDialog2/0.23.1440.823@0.23.1440.823" timestamp="1584981716098" />
     <state x="476" y="51" key="CommitChangelistDialog2/0.23.1440.825@0.23.1440.825" timestamp="1585012000579" />
     <state x="476" y="54" key="CommitChangelistDialog2/0.23.1440.826@0.23.1440.826" timestamp="1584659510790" />
@@ -257,10 +263,11 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="717" y="449" key="VCS.EditChangelistDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1584642002300" />
-    <state x="320" y="197" key="Vcs.Push.Dialog.v2" timestamp="1585012004601">
-      <screen x="0" y="23" width="1440" height="825" />
+    <state x="320" y="196" key="Vcs.Push.Dialog.v2" timestamp="1585246549441">
+      <screen x="0" y="23" width="1440" height="822" />
     </state>
     <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1584981725633" />
+    <state x="320" y="196" key="Vcs.Push.Dialog.v2/0.23.1440.822@0.23.1440.822" timestamp="1585246549441" />
     <state x="320" y="197" key="Vcs.Push.Dialog.v2/0.23.1440.825@0.23.1440.825" timestamp="1585012004601" />
     <state x="320" y="197" key="Vcs.Push.Dialog.v2/0.23.1440.826@0.23.1440.826" timestamp="1584659516053" />
     <state x="498" y="147" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1584557199810">
