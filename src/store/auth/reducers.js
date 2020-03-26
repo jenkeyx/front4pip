@@ -3,7 +3,7 @@ import {AUTH_CHANGE_PASSWORD, AUTH_CHANGE_STATUS, AUTH_CHANGE_USERNAME} from "./
 const initialState = {
     username: '',
     password: '',
-    authStatus: false
+    authStatus: true
 };
 
 export const authReducer = (state = initialState,action) =>{

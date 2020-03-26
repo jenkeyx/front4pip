@@ -3,9 +3,14 @@ import CanvasContainer from "./CanvasContainer";
 import FormContainer from "./FormContainer";
 import Table from "./Table";
 import Header from "./Header";
-import ErrorMsg from "./ErrorMsg"
+import {connect} from "react-redux";
 
-export default class Home extends React.Component {
+class Home extends React.Component {
+    constructor(props) {
+        super(props);
+        console.log('Home authStatus '+this.props.authStatus);
+    }
+
     render() {
         return(
             <div>
@@ -23,3 +28,10 @@ export default class Home extends React.Component {
         )
     }
 }
+
+const mapStateToProps = state =>{
+    return{
+        authStatus: state.auth.authStatus
+    };
+};
+export default connect(mapStateToProps)(Home);

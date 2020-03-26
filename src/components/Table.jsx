@@ -4,15 +4,16 @@ import {connect} from "react-redux";
 import "../styles/Table.css";
 
 class Table extends React.Component{
-    constructor(props) {
-        super(props);
-    }
+    // constructor(props) {
+    //     super(props);
+    // }
 
     render() {
         const dots = new DotArray(this.props.dots).getDots();
         return(
             <div className="table">
                 <table>
+                    <tbody>
                     <tr>
                         <th>X</th>
                         <th>Y</th>
@@ -34,6 +35,7 @@ class Table extends React.Component{
                                 {String(dot.isHit())}
                             </td>
                         </tr>))}
+                    </tbody>
                 </table>
             </div>
         )
@@ -44,5 +46,4 @@ const mapStateToProps = state => {
         dots: state.form.dots
     }
 };
-const mapDispatchToProps = dispatch => {};
-export default connect(mapStateToProps, mapDispatchToProps)(Table);
+export default connect(mapStateToProps)(Table);

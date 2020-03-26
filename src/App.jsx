@@ -6,11 +6,11 @@ import Welcome from "./components/Welcome";
 import {Redirect} from "react-router";
 import {connect} from 'react-redux';
 
-class App extends React.Component {
 
-    constructor(props) {
-        super(props);
-    }
+class App extends React.Component {
+    // constructor(props) {
+    //     super(props);
+    // }
 
     render() {
         return (
@@ -30,7 +30,6 @@ const mapStateToProps = state => {
         auth: state.auth
     }
 };
-const mapDispatchToProps = dispatch => {};
-export default connect(mapStateToProps, mapDispatchToProps)(App)
+export default connect(mapStateToProps)(App)
 
 

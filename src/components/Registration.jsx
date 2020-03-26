@@ -1,4 +1,5 @@
 import React from "react";
+import ErrorMsg from "./ErrorMsg";
 
 export default class Registration extends React.Component{
 
@@ -11,13 +12,16 @@ export default class Registration extends React.Component{
     }
 
     onUsernameChange(event){
+        this.setErrorMsg('');
         this.props.setUsername(event.target.value)
     }
 
     onPasswordChange(event){
+        this.setErrorMsg('');
         this.props.setPassword(event.target.value)
     }
     onPasswordRepeatChange(event){
+        this.setErrorMsg('');
         this.props.setRepeatPassword(event.target.value)
     }
 
@@ -31,6 +35,9 @@ export default class Registration extends React.Component{
             .then(response =>{if (response.status === 200) {
                 this.props.setAuthStatus(true);
                 console.log("OK!")
+            }else {
+                this.props.setAuthStatus(false);
+                this.setErrorMsg('Вы не зарегестрировались, попробуйте занова')
             }
             })
     }
@@ -52,6 +59,7 @@ export default class Registration extends React.Component{
                     <div>
                         <button type="button" onClick={this.handleRegistration}>Sign In</button>
                     </div>
+                    <ErrorMsg/>
                 </form>
             </div>
         )
@@ -64,4 +72,9 @@ export default class Registration extends React.Component{
         }
     }
 
+    setErrorMsg(message) {
+        console.log(message);
+        let errorSpan = document.getElementById('errorSpan');
+        errorSpan.innerHTML = message;
+    }
 }

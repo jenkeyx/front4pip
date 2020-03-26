@@ -1,4 +1,5 @@
 import React from "react";
+import ErrorMsg from "./ErrorMsg";
 
 export default class Auth extends React.Component{
 
@@ -10,10 +11,12 @@ export default class Auth extends React.Component{
     }
 
     onUsernameChange(event){
+        this.setErrorMsg('');
         this.props.setUsername(event.target.value)
     }
 
     onPasswordChange(event){
+        this.setErrorMsg('');
         this.props.setPassword(event.target.value)
     }
 
@@ -25,6 +28,9 @@ export default class Auth extends React.Component{
         })
             .then(response =>{if (response.status === 200) {
                 this.props.setAuthStatus(true);
+            }else {
+                this.props.setAuthStatus(false);
+                this.setErrorMsg('Неправильный логин или пароль , попробуйте занова')
             }
             })
     }
@@ -42,6 +48,7 @@ export default class Auth extends React.Component{
                     <div>
                         <button type="button" onClick={this.handleAuth}>Sign In</button>
                     </div>
+                    <ErrorMsg/>
                 </form>
             </div>
         )
@@ -52,6 +59,11 @@ export default class Auth extends React.Component{
             username: this.props.username,
             password: this.props.password
         }
+    }
+    setErrorMsg(message) {
+        console.log(message);
+        let errorSpan = document.getElementById('errorSpan');
+        errorSpan.innerHTML = message;
     }
 
 }
