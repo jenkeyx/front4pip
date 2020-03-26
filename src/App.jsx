@@ -15,10 +15,10 @@ class App extends React.Component {
     render() {
         return (
             <BrowserRouter>
-                <Route exact path='/welcome' component={Welcome}/>
+                <Route exact path='/' component={Welcome}/>
                 <Route path='/home' component={Home}/>
                 {this.props.auth.authStatus && <Redirect to={'/home'}/>}
-                {(!this.props.auth.authStatus) && <Redirect to={'/welcome'}/>}
+                {(!this.props.auth.authStatus) && <Redirect to={'/'}/>}
             </BrowserRouter>
         )
     }

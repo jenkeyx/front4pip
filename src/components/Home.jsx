@@ -29,7 +29,7 @@ class Home extends React.Component {
 
             )
         }else{
-            return <Redirect to={'/welcome'}/>
+            return <Redirect to={'/'}/>
         }
 
     }
