@@ -5,7 +5,7 @@ import "../styles/Table.css";
 export default class Table extends React.Component{
     getDots(){
         const dots = new DotArray(this.props.dots);
-        return dots.getArray()
+        return dots.getArray() //{dots: this.props.dots}
     }
 
     render() {
@@ -40,8 +40,8 @@ export default class Table extends React.Component{
             </div>
         )
     }
-    getDots(){
-        return {dots: this.props.dots}
-
-    }
+    // getDots(){
+    //     return {dots: this.props.dots}
+    //
+    // }
 }

@@ -21,7 +21,7 @@ export class DotArray {
     }
     getArray(){
         const array = this.#dots;
-        array.push(new Dot());
+        //array.push(new Dot());
         return array
     }
 }

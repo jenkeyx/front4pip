@@ -19,7 +19,7 @@ class Home extends React.Component {
                     <Header/>
                     <div id='wrapper'>
                         <div>
-                            <CanvasContainer/>
+                            {/*<CanvasContainer/>*/}
                             <FormContainer/>
                         </div>
                         <Table/>
