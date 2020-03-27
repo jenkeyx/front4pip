@@ -32,8 +32,6 @@ export default class Canvas extends React.Component {
 
     sendCoordinates(coordinates) {
         const authData = this.getAuthData();
-        console.log(authData);
-        console.log(JSON.stringify(coordinates));
         fetch("/dots", {
             method: "POST",
             body: JSON.stringify(coordinates),

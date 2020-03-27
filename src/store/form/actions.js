@@ -16,6 +16,6 @@ export const changeR = r =>({
     payload: r
 });
 export const setDots = dots =>({
-    type: FORM_CHANGE_R,
+    type: SET_DOTS,
     payload: dots
 });

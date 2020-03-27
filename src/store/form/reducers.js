@@ -5,7 +5,7 @@ const initialState = {
     x : 0,
     y : 0,
     r : 1,
-    dots:[new Dot(1,1,1), new Dot(2, 2,2)] //test data
+    dots: []
 };
 
 export const formReducer = (state = initialState,action) =>{

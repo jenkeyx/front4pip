@@ -1,22 +1,27 @@
 export class Dot{
+    #x;
+    #y;
+    #r;
+    #hit;
+
     constructor(x, y, r) {
-        this.x = x;
-        this.y = y;
-        this.r = r;
-        this.hit = this.checkArea(x, y, r);
+        this.#x = x;
+        this.#y = y;
+        this.#r = r;
+        this.#hit = this.checkArea(x,y,r);
     }
 
     getX(){
-        return this.x;
+        return this.#x;
     }
     getY(){
-        return this.y;
+        return this.#y;
     }
     getR(){
-        return this.r;
+        return this.#r;
     }
     isHit(){
-        return this.hit;
+        return this.#hit;
     }
 
     checkArea(x, y, r) {

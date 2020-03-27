@@ -1,15 +1,15 @@
 import React from "react";
 import {DotArray} from "../classes/DotArray";
-import {connect} from "react-redux";
 import "../styles/Table.css";
 
-class Table extends React.Component{
-    // constructor(props) {
-    //     super(props);
-    // }
+export default class Table extends React.Component{
+    getDots(){
+        const dots = new DotArray(this.props.dots);
+        return dots.getArray()
+    }
 
     render() {
-        const dots = new DotArray(this.props.dots).getDots();
+        console.log(this.getDots(),"bruh");
         return(
             <div className="table">
                 <table>
@@ -20,7 +20,7 @@ class Table extends React.Component{
                         <th>R</th>
                         <th>Hit</th>
                     </tr>
-                    {dots.map((dot, id) => (
+                    {this.getDots().map((dot, id) => (
                         <tr key={id}>
                             <td>
                                 {String(dot.getX())}
@@ -40,10 +40,8 @@ class Table extends React.Component{
             </div>
         )
     }
-}
-const mapStateToProps = state => {
-    return {
-        dots: state.form.dots
+    getDots(){
+        return {dots: this.props.dots}
+
     }
-};
-export default connect(mapStateToProps)(Table);
+}

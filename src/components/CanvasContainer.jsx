@@ -8,7 +8,7 @@ class CanvasContainer extends React.Component{
         return <Canvas
             x={this.props.x}  y={this.props.y} r ={this.props.r}
             username={this.props.username} password={this.props.password}
-            hitCanvas={this.props.hitCanvas}
+            dots={this.props.dots} hitCanvas={this.props.hitCanvas}
             />
     }
 }
@@ -19,7 +19,8 @@ const mapStateToProps = state =>{
         y: state.form.y,
         r: state.form.r,
         username: state.auth.username,
-        password: state.auth.password
+        password: state.auth.password,
+        dots: state.form.dots
     }
 };
 const mapDispatchToProps = {
