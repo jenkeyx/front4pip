@@ -1,6 +1,7 @@
 import React from "react";
 import ErrorMsg from "./ErrorMsg";
 import "../styles/Form.css"
+import {DotArray} from "../classes/DotArray";
 
 
 export default class Form extends React.Component{
@@ -16,6 +17,8 @@ export default class Form extends React.Component{
 
     componentDidMount() {
         this.drawGraphic(this.props.r);
+        this.drawDots();
+        this.updateData();
     }
 
     onChangeX(event){
@@ -122,6 +125,10 @@ export default class Form extends React.Component{
             r: this.props.r
         }
     }
+    updateData(){
+        const dots = this.getDots();
+        this.props.setDots(dots.getDots());
+    }
     getAuthData(){
         return{
             username: this.props.username,
@@ -183,6 +190,16 @@ export default class Form extends React.Component{
         c.fill();
     }
 
+    drawDots() {
+        let canvas = this.refs.canvas;
+        if (!(canvas === undefined)) {
+            const dots = new DotArray(this.props.form.dots);
+            await dots.getDots().forEach((dot) => {
+                this.drawDot(dot.getX(), dot.getY())
+            });
+        }
+
+    }
     sendCoordinates(coordinates) {
         const authData = this.getAuthData();
         fetch("/dots", {
@@ -197,6 +214,7 @@ export default class Form extends React.Component{
                 if (response.status === 200) this.props.hitCanvas([this.props.x, this.props.y, this.props.r]);
             })
     }
+
 
     // render() {
     //     return (
