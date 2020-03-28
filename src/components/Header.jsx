@@ -12,11 +12,11 @@ export default function Header(props) {
             </p>
 
             {!(props.authStatus) &&
-                <div>
-                    <Link to={'/signIn'}>Sign in </Link>
-                    <Link to={'/'}>Sign up</Link>
+            <div>
+                <Link to={'/signIn'}>Sign in </Link>
+                <Link to={'/'}>Sign up</Link>
 
-                </div>
+            </div>
             }
 
         </div>

@@ -15,6 +15,13 @@ export default class Form extends React.Component{
         this.onHitCanvas = this.onHitCanvas.bind(this);
     }
 
+    componentDidMount() {
+        this.updateData();
+        console.log("canvas "+this.refs.canvas);
+        drawGraphic(this.props.r, this.refs.canvas);
+        drawDots(this.props.dots, this.refs.canvas);
+    }
+
     onHitCanvas(event) {
         let rect = this.refs.canvas.getBoundingClientRect();
         let click_x, click_y;
@@ -26,13 +33,6 @@ export default class Form extends React.Component{
         this.props.setDots({x:x, y:y, r: this.props.r});
         this.sendCoordinates();
 
-    }
-
-    componentDidMount() {
-        this.updateData();
-        console.log("canvas "+this.refs.canvas);
-        drawGraphic(this.props.r, this.refs.canvas);
-        drawDots(this.props.dots, this.refs.canvas);
     }
 
     onChangeX(event){
