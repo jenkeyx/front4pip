@@ -35,6 +35,5 @@ const mapDispatchToProps = {
     changeY: changeY,
     changeR: changeR,
     setDots: setDots,
-    hitCanvas: hitCanvas,
 };
 export default connect(mapStateToProps,mapDispatchToProps)(FormContainer);

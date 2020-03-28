@@ -1,29 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dc205933-b750-497b-9b66-b24bb40ec484" name="Default Changelist" comment="маршрутизация">
+    <list default="true" id="dc205933-b750-497b-9b66-b24bb40ec484" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Auth.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Auth.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/AuthContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AuthContainer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/classes/Dot.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/Dot.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Canvas.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Canvas.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/CanvasContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CanvasContainer.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Form.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Form.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Home.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Home.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Registration.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Registration.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/RegistrationContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/RegistrationContainer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Table.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Table.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Welcome.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/Common.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/auth/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/auth/actions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/auth/reducers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/auth/reducers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/reducers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/registration/actions.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/registration/reducers.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/Form.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/Header.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/desktop.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/Table.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/Welcome.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/FormContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/FormContainer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/canvas/reducers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/canvas/reducers.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -207,7 +192,14 @@
       <option name="project" value="LOCAL" />
       <updated>1585275751052</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="маршрутизация">
+      <created>1585397677070</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1585397677070</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -234,7 +226,8 @@
     <MESSAGE value="table + validation" />
     <MESSAGE value="auth error msg" />
     <MESSAGE value="Canvas" />
-    <option name="LAST_COMMIT_MESSAGE" value="Canvas" />
+    <MESSAGE value="маршрутизация" />
+    <option name="LAST_COMMIT_MESSAGE" value="маршрутизация" />
   </component>
   <component name="WindowStateProjectService">
     <state x="440" y="190" key="#ESLint" timestamp="1584557452932">
@@ -262,13 +255,13 @@
     </state>
     <state x="495" y="224" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1440.823@0.23.1440.823" timestamp="1585301700603" />
     <state x="578" y="258" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1680.963@0.23.1680.963" timestamp="1582807448570" />
-    <state x="456" y="51" key="CommitChangelistDialog2" timestamp="1585397493722">
+    <state x="456" y="51" key="CommitChangelistDialog2" timestamp="1585397676837">
       <screen x="0" y="23" width="1440" height="823" />
     </state>
     <state x="476" y="105" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1585275750935" />
     <state x="423" y="127" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1584643590214" />
     <state x="476" y="50" key="CommitChangelistDialog2/0.23.1440.822@0.23.1440.822" timestamp="1585274093045" />
-    <state x="456" y="51" key="CommitChangelistDialog2/0.23.1440.823@0.23.1440.823" timestamp="1585397493722" />
+    <state x="456" y="51" key="CommitChangelistDialog2/0.23.1440.823@0.23.1440.823" timestamp="1585397676837" />
     <state x="476" y="51" key="CommitChangelistDialog2/0.23.1440.825@0.23.1440.825" timestamp="1585012000579" />
     <state x="476" y="54" key="CommitChangelistDialog2/0.23.1440.826@0.23.1440.826" timestamp="1584659510790" />
     <state x="555" y="55" key="CommitChangelistDialog2/0.23.1680.963@0.23.1680.963" timestamp="1585249406621" />
@@ -308,11 +301,12 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="717" y="449" key="VCS.EditChangelistDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1584642002300" />
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1585275755504">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state x="320" y="197" key="Vcs.Push.Dialog.v2" timestamp="1585397684358">
+      <screen x="0" y="23" width="1440" height="823" />
     </state>
     <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1585275755504" />
     <state x="320" y="196" key="Vcs.Push.Dialog.v2/0.23.1440.822@0.23.1440.822" timestamp="1585274097803" />
+    <state x="320" y="197" key="Vcs.Push.Dialog.v2/0.23.1440.823@0.23.1440.823" timestamp="1585397684358" />
     <state x="320" y="197" key="Vcs.Push.Dialog.v2/0.23.1440.825@0.23.1440.825" timestamp="1585012004601" />
     <state x="320" y="197" key="Vcs.Push.Dialog.v2/0.23.1440.826@0.23.1440.826" timestamp="1584659516053" />
     <state x="498" y="147" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1584557199810">

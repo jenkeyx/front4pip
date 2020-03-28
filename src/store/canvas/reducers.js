@@ -1,16 +1,14 @@
 import {CANVAS_ON_HIT} from "./actions";
 
 const initialState = {
-    username: "",
-    password:"",
-    coordinates: [0,0,1]
+    dots: []
 };
 
 export const canvasReducer = (state = initialState,action) =>{
     if (action.type === CANVAS_ON_HIT) {
         return{
             ...state,
-            coordinates: action.payload,
+            dots: action.payload,
         };
     } else {
         return state
