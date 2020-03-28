@@ -1,5 +1,6 @@
 import React from "react";
 import ErrorMsg from "./ErrorMsg";
+import Header from "./Header";
 
 export default class Auth extends React.Component{
 
@@ -36,8 +37,9 @@ export default class Auth extends React.Component{
     }
     render() {
         return(
-            <div className="auth">
-                <form>
+            <div>
+                <Header authStatus={this.props.authStatus}/>
+                <form className="auth">
                     <h3>Sign In</h3>
                     <div>
                         <input type="text" name="login" placeholder="username" value={this.props.username} onChange={this.onUsernameChange}/>

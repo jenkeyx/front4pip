@@ -1,9 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dc205933-b750-497b-9b66-b24bb40ec484" name="Default Changelist" comment="">
+    <list default="true" id="dc205933-b750-497b-9b66-b24bb40ec484" name="Default Changelist" comment="маршрутизация">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Auth.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Auth.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/AuthContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AuthContainer.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Form.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Form.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Home.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Home.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Registration.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Registration.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/RegistrationContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/RegistrationContainer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Table.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Table.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Welcome.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/Common.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/auth/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/auth/actions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/auth/reducers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/auth/reducers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/reducers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/registration/actions.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/registration/reducers.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/Form.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/Header.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/desktop.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/Table.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/Welcome.css" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -180,7 +200,14 @@
       <option name="project" value="LOCAL" />
       <updated>1585274093175</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Canvas">
+      <created>1585275751052</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1585275751052</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -230,17 +257,18 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="528" y="268" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1584595881433" />
-    <state x="578" y="258" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1582807448570">
-      <screen x="0" y="23" width="1680" height="963" />
+    <state x="495" y="224" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1585301700603">
+      <screen x="0" y="23" width="1440" height="823" />
     </state>
+    <state x="495" y="224" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1440.823@0.23.1440.823" timestamp="1585301700603" />
     <state x="578" y="258" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1680.963@0.23.1680.963" timestamp="1582807448570" />
-    <state x="476" y="50" key="CommitChangelistDialog2" timestamp="1585274093045">
-      <screen x="0" y="23" width="1440" height="822" />
+    <state x="456" y="51" key="CommitChangelistDialog2" timestamp="1585397493722">
+      <screen x="0" y="23" width="1440" height="823" />
     </state>
-    <state x="476" y="105" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1584659745297" />
+    <state x="476" y="105" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1585275750935" />
     <state x="423" y="127" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1584643590214" />
     <state x="476" y="50" key="CommitChangelistDialog2/0.23.1440.822@0.23.1440.822" timestamp="1585274093045" />
-    <state x="476" y="51" key="CommitChangelistDialog2/0.23.1440.823@0.23.1440.823" timestamp="1584981716098" />
+    <state x="456" y="51" key="CommitChangelistDialog2/0.23.1440.823@0.23.1440.823" timestamp="1585397493722" />
     <state x="476" y="51" key="CommitChangelistDialog2/0.23.1440.825@0.23.1440.825" timestamp="1585012000579" />
     <state x="476" y="54" key="CommitChangelistDialog2/0.23.1440.826@0.23.1440.826" timestamp="1584659510790" />
     <state x="555" y="55" key="CommitChangelistDialog2/0.23.1680.963@0.23.1680.963" timestamp="1585249406621" />
@@ -280,10 +308,10 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="717" y="449" key="VCS.EditChangelistDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1584642002300" />
-    <state x="320" y="196" key="Vcs.Push.Dialog.v2" timestamp="1585274097803">
-      <screen x="0" y="23" width="1440" height="822" />
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1585275755504">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1584981725633" />
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1585275755504" />
     <state x="320" y="196" key="Vcs.Push.Dialog.v2/0.23.1440.822@0.23.1440.822" timestamp="1585274097803" />
     <state x="320" y="197" key="Vcs.Push.Dialog.v2/0.23.1440.825@0.23.1440.825" timestamp="1585012004601" />
     <state x="320" y="197" key="Vcs.Push.Dialog.v2/0.23.1440.826@0.23.1440.826" timestamp="1584659516053" />
@@ -291,11 +319,12 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="498" y="147" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1680.1050@0.0.1680.1050" timestamp="1584557199810" />
-    <state x="509" y="365" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1585270917619">
-      <screen x="0" y="23" width="1440" height="822" />
+    <state x="509" y="365" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1585287104916">
+      <screen x="0" y="23" width="1440" height="823" />
     </state>
     <state x="509" y="374" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1440.900@0.0.1440.900" timestamp="1584659761637" />
     <state x="509" y="365" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.822@0.23.1440.822" timestamp="1585270917619" />
+    <state x="509" y="365" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.823@0.23.1440.823" timestamp="1585287104916" />
     <state x="198" y="0" width="1315" height="1050" key="dock-window-1" timestamp="1584557305939">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>

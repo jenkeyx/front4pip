@@ -1,0 +1,42 @@
+html{
+    height: 100%;
+}
+body{
+    font-family: 'Times New Roman', Serif;
+}
+#header{
+    text-align: center;
+    color: grey
+}
+.errorInput {
+    border: red solid 1px;
+}
+
+.errorMsg{
+    color: red;
+}
+#xInput, #yInput, #rInput {
+    width: 100px;
+    height: 20px;
+    border: royalblue solid 1px;
+    background-color: white;
+    margin: 0 10px;
+    padding: 0;
+    border-radius: 5px;
+}
+.auth, .registration {
+    margin-top: 100px;
+    text-align: center;
+}
+button{
+    margin: 10px;
+    background-color: royalblue;
+    width: 305px;
+    height: 30px;
+    border-radius: 5px;
+    border: royalblue solid 3px;
+}
+button:hover{
+    background-color: cornflowerblue;
+}
+

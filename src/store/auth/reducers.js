@@ -1,20 +1,25 @@
-import {AUTH_CHANGE_PASSWORD, AUTH_CHANGE_STATUS, AUTH_CHANGE_USERNAME} from "./actions";
+import {CHANGE_PASSWORD, AUTH_CHANGE_STATUS, CHANGE_USERNAME, CHANGE_REPEAT_PASSWORD} from "./actions";
 
 const initialState = {
     username: '',
     password: '',
+    repeatPassword: '',
     authStatus: false
 };
 
 export const authReducer = (state = initialState,action) =>{
     switch (action.type) {
-        case AUTH_CHANGE_USERNAME:
+        case CHANGE_USERNAME:
             return{
                 ...state, username: action.payload
             };
-        case AUTH_CHANGE_PASSWORD:
+        case CHANGE_PASSWORD:
             return {
                 ...state, password: action.payload
+            };
+        case CHANGE_REPEAT_PASSWORD:
+            return {
+                ...state, repeatPassword: action.payload
             };
         case AUTH_CHANGE_STATUS:
             return {

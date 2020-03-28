@@ -1,6 +1,5 @@
 import React from "react";
 import ErrorMsg from "./ErrorMsg";
-import "../styles/Form.css"
 import {DotArray} from "../classes/DotArray";
 
 
@@ -74,7 +73,7 @@ export default class Form extends React.Component{
                                 <option value="-4">-4</option>
                                 <option value="-3">-3</option>
                                 <option value="-2">-2</option>
-                                <option value="-1">1</option>
+                                <option value="-1">-1</option>
                                 <option value="0">0</option>
                                 <option value="1">1</option>
                                 <option value="2">2</option>
@@ -97,7 +96,7 @@ export default class Form extends React.Component{
                                 <option value="-4">-4</option>
                                 <option value="-3">-3</option>
                                 <option value="-2">-2</option>
-                                <option value="-1">1</option>
+                                <option value="-1">-1</option>
                                 <option value="0">0</option>
                                 <option value="1">1</option>
                                 <option value="2">2</option>
@@ -126,8 +125,10 @@ export default class Form extends React.Component{
         }
     }
     updateData(){
-        const dots = this.getDots();
-        this.props.setDots(dots.getDots());
+        if (!(this.props.dots === undefined)) {
+            const dots = new DotArray(this.props.dots);
+            this.props.setDots(dots.getDots());
+        }
     }
     getAuthData(){
         return{
@@ -156,7 +157,7 @@ export default class Form extends React.Component{
             r.match(/^[0-3](([.,]0+)|)$/) == null
         )) {
             isValid = false;
-            this.setErrorMsg('Введите значение от -5 до 3.');
+            this.setErrorMsg('Значение радиуса не может быть отрицательным');
             document.getElementById('rInput').classList.add("errorInput");
 
         }
@@ -191,10 +192,9 @@ export default class Form extends React.Component{
     }
 
     drawDots() {
-        let canvas = this.refs.canvas;
-        if (!(canvas === undefined)) {
-            const dots = new DotArray(this.props.form.dots);
-            await dots.getDots().forEach((dot) => {
+        if (!(this.props.dots === undefined)) {
+            const dots = new DotArray(this.props.dots);
+            dots.getDots().forEach((dot) => {
                 this.drawDot(dot.getX(), dot.getY())
             });
         }

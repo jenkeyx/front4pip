@@ -4,6 +4,11 @@ import {setAuthStatus, setPassword, setUsername} from "../store/auth/actions";
 import Auth from "./Auth";
 
 class AuthContainer extends React.Component{
+    componentDidMount() {
+        this.props.setAuthStatus(false);
+        console.log('Welcome auth status '+this.props.status);
+    }
+
     render() {
         return <Auth username={this.props.username}  password={this.props.password} authStatus={this.props.authStatus}
                      setUsername={this.props.setUsername} setPassword={this.props.setPassword} setAuthStatus={this.props.setAuthStatus}/>

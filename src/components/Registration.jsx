@@ -1,5 +1,6 @@
 import React from "react";
 import ErrorMsg from "./ErrorMsg";
+import Header from "./Header";
 
 export default class Registration extends React.Component{
 
@@ -44,9 +45,10 @@ export default class Registration extends React.Component{
 
     render() {
         return(
-            <div className="registration">
-                <form>
-                    <h3>Sign In</h3>
+            <div>
+                <Header authStatus={this.props.authStatus}/>
+                <form className="registration">
+                    <h3>Sign Up</h3>
                     <div>
                         <input type="text" name="login" placeholder="username" value={this.props.username} onChange={this.onUsernameChange}/>
                     </div>
@@ -57,7 +59,7 @@ export default class Registration extends React.Component{
                         <input type="password" name="repeatPassword" placeholder="repeatPassword" value={this.props.repeatPassword} onChange={this.onPasswordRepeatChange}/>
                     </div>
                     <div>
-                        <button type="button" onClick={this.handleRegistration}>Sign In</button>
+                        <button type="button" onClick={this.handleRegistration}>Sign Up</button>
                     </div>
                     <span className="errorMsg" id="errorRegSpan"> </span>
                 </form>

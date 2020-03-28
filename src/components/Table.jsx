@@ -1,6 +1,5 @@
 import React from "react";
 import {DotArray} from "../classes/DotArray";
-import "../styles/Table.css";
 
 export default class Table extends React.Component{
     getDots(){

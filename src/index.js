@@ -1,6 +1,7 @@
 import ReactDOM from "react-dom";
 import React from "react";
 import App from "./App";
+import './styles/Common.css'
 
 import rootReducer from './store/reducers';
 import {Provider} from 'react-redux';

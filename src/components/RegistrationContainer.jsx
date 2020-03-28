@@ -1,29 +1,37 @@
 import React from "react";
 import {connect} from "react-redux";
-import {setPassword, setRepeatPassword, setUsername} from "../store/registration/actions";
+import {setPassword, setRepeatPassword, setUsername} from "../store/auth/actions";
 import Registration from "./Registration";
 import {setAuthStatus} from "../store/auth/actions";
 
 class RegistrationContainer extends React.Component{
-    render() {
+    componentDidMount() {
+        this.props.setAuthStatus(false);
+        console.log('Welcome auth status '+this.props.status);
+    }
+
+    render(){
         return <Registration
             username={this.props.username}  password={this.props.password}
-            repeatPassword ={this.props.repeatPassword} setUsername={this.props.setUsername} setAuthStatus={this.props.setAuthStatus}
+            repeatPassword ={this.props.repeatPassword} authStatus={this.props.authStatus}
+            setUsername={this.props.setUsername} setAuthStatus={this.props.setAuthStatus}
             setPassword={this.props.setPassword} setRepeatPassword ={this.props.setRepeatPassword}/>
     }
+
 }
 
 const mapStateToProps = state =>{
     return{
-        username: state.registration.username,
-        password: state.registration.password,
-        repeatPassword: state.registration.repeatPassword
+        username: state.auth.username,
+        password: state.auth.password,
+        repeatPassword: state.auth.repeatPassword,
+        authStatus: state.auth.authStatus
     }
 };
 const mapDispatchToProps = {
-    setUsername: setUsername,
-    setPassword: setPassword,
-    setRepeatPassword: setRepeatPassword,
-    setAuthStatus: setAuthStatus
+    setUsername,
+    setPassword,
+    setRepeatPassword,
+    setAuthStatus
 };
 export default connect(mapStateToProps,mapDispatchToProps)(RegistrationContainer);
