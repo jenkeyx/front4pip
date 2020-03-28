@@ -127,7 +127,6 @@ export default class Form extends React.Component{
     }
 
     sendCoordinates() {
-        drawDot(this.props.x*60+200,-this.props.y*60+200, this.props.r, this.refs.canvas);
         const data = this.getData();
         const authData = this.getAuthData();
         fetch("/dots", {
@@ -139,7 +138,7 @@ export default class Form extends React.Component{
             })
         })
             .then(response => {
-                if (response.status === 200) this.drawDot(this.props.x*60+200,-this.props.y*60+200);
+                if (response.status === 200) drawDot(this.props.x*60+200,-this.props.y*60+200, this.props.r, this.refs.canvas);
             })
     }
 
