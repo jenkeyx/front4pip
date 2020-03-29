@@ -4,11 +4,10 @@ import {DotArray} from "../classes/DotArray";
 export default class Table extends React.Component{
     getDots(){
         const dots = new DotArray(this.props.dots);
-        return dots.getArray() //{dots: this.props.dots}
+        return dots.getDots();
     }
 
     render() {
-        console.log(this.getDots(),"bruh");
         return(
             <div className="table">
                 <table>

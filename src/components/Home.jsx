@@ -1,5 +1,4 @@
 import React from "react";
-import CanvasContainer from "./CanvasContainer";
 import FormContainer from "./FormContainer";
 import Table from "./Table";
 import Header from "./Header";
@@ -7,11 +6,6 @@ import {connect} from "react-redux";
 import {Redirect} from "react-router";
 
 class Home extends React.Component {
-    constructor(props) {
-        super(props);
-        console.log('Home authStatus '+this.props.authStatus);
-    }
-
     render() {
         // if(this.props.authStatus){
             return(
@@ -19,10 +13,9 @@ class Home extends React.Component {
                     <Header/>
                     <div id='wrapper'>
                         <div>
-                            {/*<CanvasContainer/>*/}
                             <FormContainer/>
                         </div>
-                        <Table/>
+                        <Table dots={this.props.dots}/>
                     </div>
 
                 </div>
@@ -37,7 +30,8 @@ class Home extends React.Component {
 
 const mapStateToProps = state =>{
     return{
-        authStatus: state.auth.authStatus
+        authStatus: state.auth.authStatus,
+        dots: state.dotsData.dots
     };
 };
 export default connect(mapStateToProps)(Home);

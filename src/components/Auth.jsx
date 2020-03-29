@@ -8,7 +8,7 @@ export default class Auth extends React.Component{
         super(props);
         this.onUsernameChange = this.onUsernameChange.bind(this);
         this.onPasswordChange = this.onPasswordChange.bind(this);
-        this.handleAuth = this.handleAuth.bind(this)
+        this.handleAuth = this.handleAuth.bind(this);
     }
 
     onUsernameChange(event){

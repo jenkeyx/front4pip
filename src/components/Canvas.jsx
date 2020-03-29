@@ -100,7 +100,7 @@ export function drawDots(dotsData, canvas) {
     if (!(dotsData === undefined)) {
         const dots = new DotArray(dotsData);
         dots.getDots().forEach((dot) => {
-            drawDot(dot.getX(), dot.getY(), canvas)
+            drawDot(dot.getX(), dot.getY(), dot.getR(), canvas)
         });
     }
 
@@ -108,7 +108,6 @@ export function drawDots(dotsData, canvas) {
 
 
 export function checkArea(x, y, r) {
-    console.log(x+" and "+y+ " and "+r);
     return (x >= 0 && y >= 0 && r * r >= x * x + y * y) ||
     (x <= 0 && y >= 0 && x >= -r / 2 && y <= r) ||
         (x <= 0 && y <= 0 && y >= -x - r / 2);

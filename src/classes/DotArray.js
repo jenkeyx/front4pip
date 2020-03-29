@@ -1,7 +1,9 @@
 import {Dot} from "./Dot";
 
 export class DotArray {
+
     #dots = [];
+
     constructor(array) {
         if(!(array===undefined)){
             Array.from(array).forEach(
@@ -20,8 +22,11 @@ export class DotArray {
         return this.#dots;
     }
     getArray(){
-        const array = this.#dots;
-        //array.push(new Dot());
-        return array
+        const array=this.#dots;
+        while (array.length<5){
+            array.push(new Dot());
+        }
+        return array;
     }
+
 }

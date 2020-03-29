@@ -2,6 +2,7 @@ import React from "react";
 import ErrorMsg from "./ErrorMsg";
 import {DotArray} from "../classes/DotArray";
 import {drawGraphic, drawDots, drawDot} from "./Canvas";
+import axios from 'axios';
 
 
 export default class Form extends React.Component{
@@ -11,13 +12,12 @@ export default class Form extends React.Component{
         this.onChangeX = this.onChangeX.bind(this);
         this.onChangeY = this.onChangeY.bind(this);
         this.onChangeR = this.onChangeR.bind(this);
-        this.onSubmitForm = this.onSubmitForm.bind(this)
+        this.onSubmitForm = this.onSubmitForm.bind(this);
         this.onHitCanvas = this.onHitCanvas.bind(this);
     }
 
     componentDidMount() {
-        this.updateData();
-        console.log("canvas "+this.refs.canvas);
+
         drawGraphic(this.props.r, this.refs.canvas);
         drawDots(this.props.dots, this.refs.canvas);
     }
@@ -27,11 +27,12 @@ export default class Form extends React.Component{
         let click_x, click_y;
         click_x = event.clientX - rect.left;
         click_y = event.clientY - rect.top;
-        let x = (click_x - 200) / 60; //w = x*60+200
-        let y = (-click_y + 200) / 60;//w= -y*60+200
+        let x = (click_x - 200) / 60;
+        let y = (-click_y + 200) / 60;
         drawDot(click_x, click_y, this.props.r, this.refs.canvas);
-        this.props.setDots({x:x, y:y, r: this.props.r});
-        this.sendCoordinates();
+        //this.props.setDots(new Dot(x, y, this.props.r));
+        this.sendCoordinates()
+            .then(() => drawDot(click_x, click_y, this.props.r, this.refs.canvas));
 
     }
 
@@ -87,12 +88,7 @@ export default class Form extends React.Component{
             password: this.props.password
         }
     }
-    updateData(){
-        if (!(this.props.dots === undefined)) {
-            const dots = new DotArray(this.props.dots);
-            this.props.setDots(dots.getDots());
-        }
-    }
+
 
     validateY(y) {
         let isValid = true;
@@ -121,12 +117,40 @@ export default class Form extends React.Component{
     }
 
     setErrorMsg(message) {
-        console.log(message);
         let errorSpan = document.getElementById('errorSpan');
         errorSpan.innerHTML = message;
     }
 
-    sendCoordinates() {
+    async getDotsFormServer() {
+        let dots = new DotArray(this.props.dots);
+        const authData = this.getAuthData();
+        await axios.get("/dots", {
+            headers: {
+                Authorization: 'Basic' + btoa(authData.username + ":" + authData.password),
+                'Content-type': 'application/json'
+            }
+        }).then(
+            response => {
+                if (response.status === 200) {
+                    dots = new DotArray();
+                    Array.from(response.data).forEach(dot => {
+                        dots.add(dot.x, dot.y, dot.r)
+                    })
+                }
+            },
+            () => {
+                console.log("sukaa")
+            }
+        );
+        return dots
+    }
+
+    async updateDots() {
+        const dots = await this.getDotsFormServer();
+        this.props.setDots(dots);
+    }
+
+    async sendCoordinates() {
         const data = this.getData();
         const authData = this.getAuthData();
         fetch("/dots", {
@@ -138,9 +162,14 @@ export default class Form extends React.Component{
             })
         })
             .then(response => {
-                if (response.status === 200) drawDot(this.props.x*60+200,-this.props.y*60+200, this.props.r, this.refs.canvas);
-            })
+                    if (response.status === 200) {
+                        drawDot(this.props.x*60+200,-this.props.y*60+200, this.props.r, this.refs.canvas);
+                    }
+                },
+                () => console.log("ERROR"));
+        await this.updateDots();
     }
+
 
     render() {
         return(

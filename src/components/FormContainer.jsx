@@ -1,8 +1,8 @@
 import React from "react";
 import Form from "./Form";
 import {connect} from "react-redux";
-import {changeX, changeY, changeR, setDots} from "../store/form/actions";
-import {hitCanvas} from "../store/canvas/actions";
+import {changeX, changeY, changeR, setDots} from "../store/dotsData/actions";
+
 
 class FormContainer extends React.Component{
     render() {
@@ -14,26 +14,26 @@ class FormContainer extends React.Component{
             changeY={this.props.changeY}
             changeR={this.props.changeR}
             setDots={this.props.setDots}
-            hitCanvas={this.props.hitCanvas}
         />
     }
 }
 
 const mapStateToProps = state =>{
     return{
-        x: state.form.x,
-        y: state.form.y,
-        r: state.form.r,
+        x: state.dotsData.x,
+        y: state.dotsData.y,
+        r: state.dotsData.r,
         username: state.auth.username,
         password: state.auth.password,
-        dots: state.form.dots
+        dot: state.dotsData.dot,
+        dots: state.dotsData.dots
 
     }
 };
 const mapDispatchToProps = {
-    changeX: changeX,
-    changeY: changeY,
-    changeR: changeR,
-    setDots: setDots,
+    changeX,
+    changeY,
+    changeR,
+    setDots
 };
 export default connect(mapStateToProps,mapDispatchToProps)(FormContainer);

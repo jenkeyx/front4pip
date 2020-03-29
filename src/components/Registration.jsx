@@ -9,7 +9,7 @@ export default class Registration extends React.Component{
         this.onUsernameChange = this.onUsernameChange.bind(this);
         this.onPasswordChange = this.onPasswordChange.bind(this);
         this.onPasswordRepeatChange = this.onPasswordRepeatChange.bind(this);
-        this.handleRegistration = this.handleRegistration.bind(this)
+        this.handleRegistration = this.handleRegistration.bind(this);
     }
 
     onUsernameChange(event){
