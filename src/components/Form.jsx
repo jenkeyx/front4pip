@@ -1,6 +1,7 @@
 import React from "react";
 import ErrorMsg from "./ErrorMsg";
 import {DotArray} from "../classes/DotArray";
+import {Dot} from "../classes/Dot";
 import {drawGraphic, drawDots, drawDot} from "./Canvas";
 import axios from 'axios';
 
@@ -17,9 +18,11 @@ export default class Form extends React.Component{
     }
 
     componentDidMount() {
-
         drawGraphic(this.props.r, this.refs.canvas);
-        drawDots(this.props.dots, this.refs.canvas);
+        this.updateDots().then(
+            () => drawDots(this.props.dots, this.refs.canvas));
+
+
     }
 
     onHitCanvas(event) {
@@ -147,12 +150,16 @@ export default class Form extends React.Component{
 
     async updateDots() {
         const dots = await this.getDotsFormServer();
+        // const dots = [new Dot(1,1,1), new Dot(2,2,2)];
         this.props.setDots(dots);
     }
 
     async sendCoordinates() {
         const data = this.getData();
         const authData = this.getAuthData();
+
+        this.updateDots();
+
         fetch("/dots", {
             method: "POST",
             body: JSON.stringify(data),

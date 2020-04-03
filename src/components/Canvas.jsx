@@ -100,7 +100,7 @@ export function drawDots(dotsData, canvas) {
     if (!(dotsData === undefined)) {
         const dots = new DotArray(dotsData);
         dots.getDots().forEach((dot) => {
-            drawDot(dot.getX(), dot.getY(), dot.getR(), canvas)
+            drawDot(dot.getX()*60+200, -dot.getY()*60+200, dot.getR(), canvas)
         });
     }
 
