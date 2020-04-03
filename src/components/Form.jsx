@@ -1,12 +1,11 @@
 import React from "react";
 import ErrorMsg from "./ErrorMsg";
 import {DotArray} from "../classes/DotArray";
-import {Dot} from "../classes/Dot";
 import {drawGraphic, drawDots, drawDot} from "./Canvas";
 import axios from 'axios';
 
 
-export default class Form extends React.Component{
+export default class Form extends React.Component {
 
     constructor(props) {
         super(props);
@@ -33,25 +32,26 @@ export default class Form extends React.Component{
         let x = (click_x - 200) / 60;
         let y = (-click_y + 200) / 60;
         drawDot(click_x, click_y, this.props.r, this.refs.canvas);
-        //this.props.setDots(new Dot(x, y, this.props.r));
-        this.sendCoordinates()
+        this.sendCoordinates(x, y, this.props.r)
             .then(() => drawDot(click_x, click_y, this.props.r, this.refs.canvas));
 
     }
 
-    onChangeX(event){
+    onChangeX(event) {
         this.props.changeX(event.target.value)
     }
-    onChangeY(event){
+
+    onChangeY(event) {
         this.setErrorMsg("");
         document.getElementById('yInput').classList.remove("errorInput");
         this.props.changeY(event.target.value);
         this.validateY(event.target.value);
 
     }
-    onChangeR(event){
+
+    onChangeR(event) {
         this.setErrorMsg("");
-        if(this.validateR(event.target.value)){
+        if (this.validateR(event.target.value)) {
             drawGraphic(event.target.value, this.refs.canvas);
             this.props.changeR(event.target.value);
             drawDots(this.props.dots, this.refs.canvas);
@@ -59,34 +59,21 @@ export default class Form extends React.Component{
 
     }
 
-    onSubmitForm(){
-        this.sendCoordinates();
-        // const data = this.getData();
-        // const authData = this.getAuthData();
-        // this.drawDot(this.props.x*60+200,-this.props.y*60+200);
-        // fetch("/dots",{
-        //     method: "POST",
-        //     body: JSON.stringify(data),
-        //     headers: new Headers({
-        //         "Content-type":"application/json",
-        //         "Authorization": 'Basic' + btoa(authData.username + ":" + authData.password)
-        //     })
-        // })
-        //     .then(response =>{if (response.status === 200) {
-        //         this.props.setAuthStatus(true);
-        //
-        //     }})
-
+    onSubmitForm() {
+        const dotData = this.getData();
+        this.sendCoordinates(dotData.x,dotData.y,dotData.r).then(() => drawDots());
     }
-    getData(){
-        return{
+
+    getData() {
+        return {
             x: this.props.x,
             y: this.props.y,
             r: this.props.r
         }
     }
-    getAuthData(){
-        return{
+
+    getAuthData() {
+        return {
             username: this.props.username,
             password: this.props.password
         }
@@ -106,6 +93,7 @@ export default class Form extends React.Component{
         }
         return isValid;
     }
+
     validateR(r) {
         let isValid = true;
         if (r === undefined || (r.match(/^[0-2][.,]\d+$/) == null &&
@@ -150,19 +138,15 @@ export default class Form extends React.Component{
 
     async updateDots() {
         const dots = await this.getDotsFormServer();
-        // const dots = [new Dot(1,1,1), new Dot(2,2,2)];
         this.props.setDots(dots);
     }
 
-    async sendCoordinates() {
-        const data = this.getData();
+    async sendCoordinates(x, y, r) {
         const authData = this.getAuthData();
-
         this.updateDots();
-
         fetch("/dots", {
             method: "POST",
-            body: JSON.stringify(data),
+            body: JSON.stringify({x: x, y: y, r: r}),
             headers: new Headers({
                 'Content-type': "application/json",
                 'Authorization': "Basic" + btoa(authData.username + ":" + authData.password)
@@ -170,7 +154,7 @@ export default class Form extends React.Component{
         })
             .then(response => {
                     if (response.status === 200) {
-                        drawDot(this.props.x*60+200,-this.props.y*60+200, this.props.r, this.refs.canvas);
+                        drawDot(this.props.x * 60 + 200, -this.props.y * 60 + 200, this.props.r, this.refs.canvas);
                     }
                 },
                 () => console.log("ERROR"));
@@ -179,14 +163,14 @@ export default class Form extends React.Component{
 
 
     render() {
-        return(
+        return (
             <div className="form">
                 <div className="canvas">
                     <canvas id='canvas' width="400" height="400" ref='canvas' onClick={this.onHitCanvas}>
                         Здесь должен был быть Canvas, но ваш браузер его не поддерживает.
                     </canvas>
                 </div>
-                <form >
+                <form>
                     <label>
                         X:
                         <select id="xInput" value={this.props.x} onChange={this.onChangeX}>
@@ -227,7 +211,7 @@ export default class Form extends React.Component{
                             {this.props.r ? ' ' : 'Radius is not selected'}
                         </div>
                     </label>
-                    <ErrorMsg style={{color:'red'}}/><br/>
+                    <ErrorMsg style={{color: 'red'}}/><br/>
                     <button type="button" onClick={this.onSubmitForm}>
                         Check
                     </button>
