@@ -1,5 +1,5 @@
 import ReactDOM from "react-dom";
-import React from "react";
+import React, {useState} from "react";
 import App from "./App";
 import './styles/Common.css'
 
@@ -10,6 +10,7 @@ import {createStore} from "redux";
 ReactDOM.render(
     <Provider store = {createStore(rootReducer)}>
         <App/>
+
     </Provider>
     , document.getElementById('root')
 );

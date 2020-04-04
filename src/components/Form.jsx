@@ -138,7 +138,7 @@ export default class Form extends React.Component {
 
     async updateDots() {
         const dots = await this.getDotsFormServer();
-        this.props.setDots(dots);
+        this.props.setDots(dots.getDots());
     }
 
     async sendCoordinates(x, y, r) {

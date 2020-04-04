@@ -2,8 +2,13 @@ import React from "react";
 import {DotArray} from "../classes/DotArray";
 
 export default class Table extends React.Component{
+    constructor(props) {
+        super(props);
+    }
     getDots(){
         const dots = new DotArray(this.props.dots);
+        console.log("getDots()");
+        console.log(dots);
         return dots.getDots();
     }
 
@@ -11,26 +16,28 @@ export default class Table extends React.Component{
         return(
             <div className="table">
                 <table>
-                    <tbody>
+                    <thead>
                     <tr>
-                        <th>X</th>
-                        <th>Y</th>
-                        <th>R</th>
-                        <th>Hit</th>
+                        <td>X</td>
+                        <td>Y</td>
+                        <td>R</td>
+                        <td>Hit</td>
                     </tr>
+                    </thead>
+                    <tbody>
                     {this.getDots().map((dot, id) => (
                         <tr key={id}>
                             <td>
-                                {String(dot.getX())}
+                                {String(dot.getX()) || <br/>}
                             </td>
                             <td>
-                                {String(dot.getY())}
+                                {String(dot.getY()) || ''}
                             </td>
                             <td>
-                                {String(dot.getR())}
+                                {String(dot.getR()) ||''}
                             </td>
                             <td>
-                                {String(dot.isHit())}
+                                {String(dot.isHit()) ||''}
                             </td>
                         </tr>))}
                     </tbody>
@@ -38,8 +45,4 @@ export default class Table extends React.Component{
             </div>
         )
     }
-    // getDots(){
-    //     return {dots: this.props.dots}
-    //
-    // }
 }
