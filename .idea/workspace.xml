@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="dc205933-b750-497b-9b66-b24bb40ec484" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Form.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Form.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Home.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Home.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -250,7 +250,14 @@
       <option name="project" value="LOCAL" />
       <updated>1586070602952</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="fix toFixed from form">
+      <created>1586071301658</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1586071301658</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -284,7 +291,8 @@
     <MESSAGE value="-_-" />
     <MESSAGE value="some fixex final" />
     <MESSAGE value="fix update home" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix update home" />
+    <MESSAGE value="fix toFixed from form" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix toFixed from form" />
   </component>
   <component name="WindowStateProjectService">
     <state x="440" y="190" key="#ESLint" timestamp="1584557452932">
@@ -313,8 +321,8 @@
     <state x="495" y="224" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1440.823@0.23.1440.823" timestamp="1585428249127" />
     <state x="495" y="224" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1440.825@0.23.1440.825" timestamp="1585501079528" />
     <state x="578" y="258" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1680.963@0.23.1680.963" timestamp="1582807448570" />
-    <state x="476" y="105" key="CommitChangelistDialog2" timestamp="1586070602469">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state x="476" y="56" key="CommitChangelistDialog2" timestamp="1586071301436">
+      <screen x="0" y="23" width="1440" height="828" />
     </state>
     <state x="476" y="105" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1586070602469" />
     <state x="423" y="127" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1584643590214" />
@@ -322,6 +330,7 @@
     <state x="456" y="51" key="CommitChangelistDialog2/0.23.1440.823@0.23.1440.823" timestamp="1585397676837" />
     <state x="476" y="51" key="CommitChangelistDialog2/0.23.1440.825@0.23.1440.825" timestamp="1585522120577" />
     <state x="476" y="54" key="CommitChangelistDialog2/0.23.1440.826@0.23.1440.826" timestamp="1584659510790" />
+    <state x="476" y="56" key="CommitChangelistDialog2/0.23.1440.828@0.23.1440.828" timestamp="1586071301436" />
     <state x="555" y="55" key="CommitChangelistDialog2/0.23.1680.963@0.23.1680.963" timestamp="1585249406621" />
     <state x="100" y="100" width="1240" height="700" key="DiffContextDialog" timestamp="1585270706888">
       <screen x="0" y="23" width="1440" height="822" />

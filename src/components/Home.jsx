@@ -7,7 +7,7 @@ import {Redirect} from "react-router";
 
 class Home extends React.Component {
     render() {
-        // if(this.props.authStatus){
+        if(this.props.authStatus){
             return(
                 <div>
                     <Header/>
@@ -21,9 +21,9 @@ class Home extends React.Component {
                 </div>
 
             )
-        // }else{
-        //     return <Redirect to={'/'}/>
-        // }
+        }else{
+            return <Redirect to={'/'}/>
+        }
 
     }
 }
