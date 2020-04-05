@@ -3,7 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="dc205933-b750-497b-9b66-b24bb40ec484" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Registration.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Registration.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Form.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Form.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Table.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Table.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -296,12 +298,11 @@
     <state x="495" y="224" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1440.823@0.23.1440.823" timestamp="1585428249127" />
     <state x="495" y="224" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1440.825@0.23.1440.825" timestamp="1585501079528" />
     <state x="578" y="258" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1680.963@0.23.1680.963" timestamp="1582807448570" />
-    <state x="635" y="35" key="CommitChangelistDialog2" timestamp="1586077353550">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="476" y="51" key="CommitChangelistDialog2" timestamp="1585522120577">
+      <screen x="0" y="23" width="1440" height="825" />
     </state>
     <state x="476" y="105" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1585428594359" />
     <state x="423" y="127" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1584643590214" />
-    <state x="635" y="35" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1586077353550" />
     <state x="476" y="50" key="CommitChangelistDialog2/0.23.1440.822@0.23.1440.822" timestamp="1585274093045" />
     <state x="456" y="51" key="CommitChangelistDialog2/0.23.1440.823@0.23.1440.823" timestamp="1585397676837" />
     <state x="476" y="51" key="CommitChangelistDialog2/0.23.1440.825@0.23.1440.825" timestamp="1585522120577" />
@@ -315,32 +316,28 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="705" y="425" key="Github.ShareDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1584639315515" />
-    <state width="1899" height="281" key="GridCell.Tab.0.bottom" timestamp="1586076443961">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1659" height="258" key="GridCell.Tab.0.bottom" timestamp="1585249203133">
+      <screen x="0" y="23" width="1680" height="963" />
     </state>
     <state width="1659" height="295" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1584662272413" />
-    <state width="1899" height="281" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1586076443961" />
     <state width="1379" height="246" key="GridCell.Tab.0.bottom/0.23.1680.960@0.23.1680.960" timestamp="1583136940960" />
     <state width="1659" height="258" key="GridCell.Tab.0.bottom/0.23.1680.963@0.23.1680.963" timestamp="1585249203133" />
-    <state width="1899" height="281" key="GridCell.Tab.0.center" timestamp="1586076443961">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1659" height="258" key="GridCell.Tab.0.center" timestamp="1585249203132">
+      <screen x="0" y="23" width="1680" height="963" />
     </state>
     <state width="1659" height="295" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1584662272412" />
-    <state width="1899" height="281" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1586076443961" />
     <state width="1379" height="246" key="GridCell.Tab.0.center/0.23.1680.960@0.23.1680.960" timestamp="1583136940958" />
     <state width="1659" height="258" key="GridCell.Tab.0.center/0.23.1680.963@0.23.1680.963" timestamp="1585249203132" />
-    <state width="1899" height="281" key="GridCell.Tab.0.left" timestamp="1586076443961">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1659" height="258" key="GridCell.Tab.0.left" timestamp="1585249203132">
+      <screen x="0" y="23" width="1680" height="963" />
     </state>
     <state width="1659" height="295" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1584662272412" />
-    <state width="1899" height="281" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1586076443961" />
     <state width="1379" height="246" key="GridCell.Tab.0.left/0.23.1680.960@0.23.1680.960" timestamp="1583136940957" />
     <state width="1659" height="258" key="GridCell.Tab.0.left/0.23.1680.963@0.23.1680.963" timestamp="1585249203132" />
-    <state width="1899" height="281" key="GridCell.Tab.0.right" timestamp="1586076443961">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1659" height="258" key="GridCell.Tab.0.right" timestamp="1585249203133">
+      <screen x="0" y="23" width="1680" height="963" />
     </state>
     <state width="1659" height="295" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1584662272413" />
-    <state width="1899" height="281" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1586076443961" />
     <state width="1379" height="246" key="GridCell.Tab.0.right/0.23.1680.960@0.23.1680.960" timestamp="1583136940959" />
     <state width="1659" height="258" key="GridCell.Tab.0.right/0.23.1680.963@0.23.1680.963" timestamp="1585249203133" />
     <state x="717" y="449" key="VCS.EditChangelistDialog" timestamp="1584642002300">

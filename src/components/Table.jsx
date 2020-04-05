@@ -28,13 +28,13 @@ export default class Table extends React.Component{
                     {this.getDots().map((dot, id) => (
                         <tr key={id}>
                             <td>
-                                {String(dot.getX()) || <br/>}
+                                {String(dot.getX().toFixed(2)) || <br/>}
                             </td>
                             <td>
-                                {String(dot.getY()) || ''}
+                                {String(dot.getY().toFixed(2)) || ''}
                             </td>
                             <td>
-                                {String(dot.getR()) ||''}
+                                {String(dot.getR().toFixed(2)) ||''}
                             </td>
                             <td>
                                 {String(dot.isHit()) ||''}

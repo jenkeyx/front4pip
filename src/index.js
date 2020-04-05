@@ -14,3 +14,12 @@ ReactDOM.render(
     </Provider>
     , document.getElementById('root')
 );
+
+
+
+//todo при регистрации разные пароли
+//todo сортировка точек
+
+
+//todo обновление приложения вылетает из хоума
+//todo точки туфикед
