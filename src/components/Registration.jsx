@@ -1,5 +1,4 @@
 import React from "react";
-import ErrorMsg from "./ErrorMsg";
 import Header from "./Header";
 
 export default class Registration extends React.Component{
@@ -28,19 +27,22 @@ export default class Registration extends React.Component{
 
     handleRegistration(){
         const data = this.getData();
-        fetch("/registration",{
-            method: "POST",
-            body: JSON.stringify(data),
-            headers: new Headers({"Content-type":"application/json"})
-        })
-            .then(response =>{if (response.status === 200) {
-                this.props.setAuthStatus(true);
-                console.log("OK!")
-            }else {
-                this.props.setAuthStatus(false);
-                this.setErrorMsg('Вы не зарегестрировались, попробуйте занова')
-            }
+        if (this.checkRegInput()) {
+            fetch("/registration", {
+                method: "POST",
+                body: JSON.stringify(data),
+                headers: new Headers({"Content-type": "application/json"})
             })
+                .then(response => {
+                    if (response.status === 200) {
+                        this.props.setAuthStatus(true);
+                        console.log("OK!")
+                    } else {
+                        this.props.setAuthStatus(false);
+                        this.setErrorMsg('Вы не зарегестрировались, попробуйте занова')
+                    }
+                })
+        }else this.setErrorMsg('Введены некорректные данные, попробуйте еще раз')
     }
 
     render() {
@@ -78,5 +80,12 @@ export default class Registration extends React.Component{
         console.log(message);
         let errorSpan = document.getElementById('errorRegSpan');
         errorSpan.innerHTML = message;
+    }
+    checkRegInput(){
+        const username = this.props.username;
+        const password = this.props.password;
+        const repeatPassword = this.props.repeatPassword;
+
+        return !(username == null || username === "" || password == null || password === ""|| repeatPassword == null || repeatPassword === "" || repeatPassword !== password)
     }
 }
