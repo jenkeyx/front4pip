@@ -5,7 +5,7 @@ export const dark = {
     gradient: 'linear-gradient(#091236, #1E215D)'
 };
 export const light = {
-    body: '#E2E2E2',
+    body: '#fff',
     text: '#363537',
     toggleBorder: '#FFF',
     gradient: 'linear-gradient(#39598A, #79D7ED)',

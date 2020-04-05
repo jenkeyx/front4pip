@@ -5,6 +5,10 @@ html{
 body{
     font-family: 'Times New Roman', Serif;
 }
+#themeButton{
+    width: 55px;
+    height: 40px;
+}
 #header{
     text-align: center;
     color: grey
@@ -15,6 +19,9 @@ body{
 
 .errorMsg{
     color: red;
+}
+.form{
+    text-align: center;
 }
 #xInput, #yInput, #rInput {
     width: 100px;
@@ -49,4 +56,30 @@ thead{
     border: royalblue 1px solid;
     color: royalblue;
     font-weight: bold;
+}
+
+.registration input, .auth input{
+    margin: 10px;
+    width: 300px;
+    height: 30px;
+    border-radius: 5px;
+    border: royalblue solid 1px;
+}
+
+@media (max-width: 785px){
+    #wrapper{
+        display: flex;
+        flex-direction: column;
+    }
+}
+@media (min-width: 786px){
+    #wrapper{
+        display: flex;
+        flex-direction: row;
+    }
+    table{
+        width: 400px;
+        border: royalblue 1px solid;
+        margin: 10%;
+    }
 }

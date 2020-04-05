@@ -26,7 +26,7 @@ function App(props) {
         <ThemeProvider theme={theme === 'light' ? light : dark}>
             <BrowserRouter>
                 <GlobalStyles/>
-                <button onClick={toggleTheme}>Toggle theme</button>
+                <button id='themeButton' onClick={toggleTheme}>Toggle theme</button>
                 <Route exact path='/' component={RegistrationContainer}/>
                 <Route path='/signIn' component={AuthContainer}/>
                 <Route path='/home' component={Home}/>

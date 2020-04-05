@@ -6,8 +6,11 @@ export const GlobalStyles = createGlobalStyle`
   *::before {
     box-sizing: border-box;
   }
+  #root{
+    align-items: center;
+  }
 
-  body {
+  html {
     align-items: center;
     background: ${({ theme }) => theme.body};
     color: ${({ theme }) => theme.text};
