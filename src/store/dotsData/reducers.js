@@ -5,7 +5,7 @@ const initialState = {
     x : 0,
     y : 0,
     r : 1,
-    dots: []//new Dot(0,0,1), new Dot(1, 1,2)
+    dots: []//new Dot(0.5362472387,0,1), new Dot(1, 1,2) test data
 };
 
 export const dotsReducer = (state = initialState,action) =>{

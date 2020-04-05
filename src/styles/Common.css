@@ -41,3 +41,12 @@ button:hover{
     background-color: cornflowerblue;
 }
 
+table{
+    width: 400px;
+    border: royalblue 1px solid;
+}
+thead{
+    border: royalblue 1px solid;
+    color: royalblue;
+    font-weight: bold;
+}

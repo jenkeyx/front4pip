@@ -3,9 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="dc205933-b750-497b-9b66-b24bb40ec484" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Form.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Form.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Table.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Table.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/dotsData/reducers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/dotsData/reducers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/Common.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/Common.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/desktop.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/desktop.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -123,7 +126,8 @@
       <workItem from="1585876664473" duration="1197000" />
       <workItem from="1585908743873" duration="882000" />
       <workItem from="1585988197978" duration="1619000" />
-      <workItem from="1585990406576" duration="1832000" />
+      <workItem from="1585990406576" duration="1873000" />
+      <workItem from="1586053757955" duration="1286000" />
     </task>
     <task id="LOCAL-00001" summary="Маршрутизация">
       <created>1584647611615</created>
@@ -237,7 +241,14 @@
       <option name="project" value="LOCAL" />
       <updated>1585522120904</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="some fixex final">
+      <created>1585992311443</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1585992311444</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -269,7 +280,8 @@
     <MESSAGE value="теперь когда тыкаешь точка правильного цвета" />
     <MESSAGE value="темная тема" />
     <MESSAGE value="-_-" />
-    <option name="LAST_COMMIT_MESSAGE" value="-_-" />
+    <MESSAGE value="some fixex final" />
+    <option name="LAST_COMMIT_MESSAGE" value="some fixex final" />
   </component>
   <component name="WindowStateProjectService">
     <state x="440" y="190" key="#ESLint" timestamp="1584557452932">
@@ -298,10 +310,10 @@
     <state x="495" y="224" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1440.823@0.23.1440.823" timestamp="1585428249127" />
     <state x="495" y="224" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1440.825@0.23.1440.825" timestamp="1585501079528" />
     <state x="578" y="258" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1680.963@0.23.1680.963" timestamp="1582807448570" />
-    <state x="476" y="51" key="CommitChangelistDialog2" timestamp="1585522120577">
-      <screen x="0" y="23" width="1440" height="825" />
+    <state x="476" y="105" key="CommitChangelistDialog2" timestamp="1585992311185">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="476" y="105" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1585428594359" />
+    <state x="476" y="105" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1585992311185" />
     <state x="423" y="127" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1584643590214" />
     <state x="476" y="50" key="CommitChangelistDialog2/0.23.1440.822@0.23.1440.822" timestamp="1585274093045" />
     <state x="456" y="51" key="CommitChangelistDialog2/0.23.1440.823@0.23.1440.823" timestamp="1585397676837" />
@@ -344,26 +356,27 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="717" y="449" key="VCS.EditChangelistDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1584642002300" />
-    <state x="320" y="197" key="Vcs.Push.Dialog.v2" timestamp="1585522125889">
-      <screen x="0" y="23" width="1440" height="825" />
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1585992316510">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1585428599265" />
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1585992316510" />
     <state x="320" y="196" key="Vcs.Push.Dialog.v2/0.23.1440.822@0.23.1440.822" timestamp="1585274097803" />
     <state x="320" y="197" key="Vcs.Push.Dialog.v2/0.23.1440.823@0.23.1440.823" timestamp="1585397684358" />
     <state x="320" y="197" key="Vcs.Push.Dialog.v2/0.23.1440.825@0.23.1440.825" timestamp="1585522125889" />
     <state x="320" y="197" key="Vcs.Push.Dialog.v2/0.23.1440.826@0.23.1440.826" timestamp="1584659516053" />
-    <state x="770" y="265" key="com.intellij.ide.util.TipDialog" timestamp="1585876841420">
-      <screen x="0" y="23" width="1440" height="825" />
+    <state x="770" y="280" key="com.intellij.ide.util.TipDialog" timestamp="1586053781046">
+      <screen x="0" y="23" width="1440" height="826" />
     </state>
     <state x="770" y="265" key="com.intellij.ide.util.TipDialog/0.23.1440.825@0.23.1440.825" timestamp="1585876841420" />
+    <state x="770" y="280" key="com.intellij.ide.util.TipDialog/0.23.1440.826@0.23.1440.826" timestamp="1586053781046" />
     <state x="498" y="147" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1584557199810">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="498" y="147" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1680.1050@0.0.1680.1050" timestamp="1584557199810" />
-    <state x="509" y="366" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1585988205627">
-      <screen x="0" y="23" width="1440" height="825" />
+    <state x="509" y="374" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1586053771995">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="509" y="374" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1440.900@0.0.1440.900" timestamp="1584659761637" />
+    <state x="509" y="374" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1440.900@0.0.1440.900" timestamp="1586053771995" />
     <state x="509" y="365" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.822@0.23.1440.822" timestamp="1585270917619" />
     <state x="509" y="365" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.823@0.23.1440.823" timestamp="1585287104916" />
     <state x="509" y="366" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.825@0.23.1440.825" timestamp="1585988205627" />
