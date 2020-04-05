@@ -32,7 +32,7 @@ export default class Form extends React.Component {
         let x = (click_x - 200) / 60;
         let y = (-click_y + 200) / 60;
         drawDot(click_x, click_y, this.props.r, this.refs.canvas);
-        this.sendCoordinates(x, y, this.props.r)
+        this.sendCoordinates(x.toFixed(2), y.toFixed(2), this.props.r)
             .then(() => drawDot(click_x, click_y, this.props.r, this.refs.canvas));
 
     }
@@ -61,7 +61,8 @@ export default class Form extends React.Component {
 
     onSubmitForm() {
         const dotData = this.getData();
-        this.sendCoordinates(dotData.x,dotData.y,dotData.r).then(() => this.updateDots());
+        console.log(dotData.x,dotData.y);
+        this.sendCoordinates(dotData.x,Number(dotData.y).toFixed(2),dotData.r).then(() => this.updateDots());
     }
 
     getData() {
@@ -147,7 +148,7 @@ export default class Form extends React.Component {
         this.updateDots();
         fetch("/dots", {
             method: "POST",
-            body: JSON.stringify({x: x.toFixed(2), y: y.toFixed(2), r: r}),
+            body: JSON.stringify({x: x, y: y, r: r}),
             headers: new Headers({
                 'Content-type': "application/json",
                 'Authorization': "Basic" + btoa(authData.username + ":" + authData.password)
