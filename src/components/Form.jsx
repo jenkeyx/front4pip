@@ -19,7 +19,7 @@ export default class Form extends React.Component {
     componentDidMount() {
         drawGraphic(this.props.r, this.refs.canvas);
         this.updateDots().then(
-            () => drawDots(this.props.dots, this.refs.canvas));
+            () => drawDots(this.props.dots, this.refs.canvas,this.props.r));
 
 
     }
@@ -54,14 +54,14 @@ export default class Form extends React.Component {
         if (this.validateR(event.target.value)) {
             drawGraphic(event.target.value, this.refs.canvas);
             this.props.changeR(event.target.value);
-            drawDots(this.props.dots, this.refs.canvas);
+            drawDots(this.props.dots, this.refs.canvas, event.target.value);
         }
 
     }
 
     onSubmitForm() {
         const dotData = this.getData();
-        this.sendCoordinates(dotData.x,dotData.y,dotData.r).then(() => drawDots());
+        this.sendCoordinates(dotData.x,dotData.y,dotData.r).then(() => this.updateDots());
     }
 
     getData() {
@@ -138,6 +138,7 @@ export default class Form extends React.Component {
 
     async updateDots() {
         const dots = await this.getDotsFormServer();
+        this.props.setDots([]);
         this.props.setDots(dots.getDots());
     }
 
@@ -146,7 +147,7 @@ export default class Form extends React.Component {
         this.updateDots();
         fetch("/dots", {
             method: "POST",
-            body: JSON.stringify({x: x, y: y, r: r}),
+            body: JSON.stringify({x: x.toFixed(2), y: y.toFixed(2), r: r}),
             headers: new Headers({
                 'Content-type': "application/json",
                 'Authorization': "Basic" + btoa(authData.username + ":" + authData.password)

@@ -3,7 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="dc205933-b750-497b-9b66-b24bb40ec484" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/classes/DotArray.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/DotArray.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Canvas.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Canvas.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Form.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Form.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Home.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Home.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Table.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Table.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

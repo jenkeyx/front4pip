@@ -1,7 +1,8 @@
 import React from "react";
 import {DotArray} from "../classes/DotArray";
+import {connect} from "react-redux";
 
-export default class Table extends React.Component{
+class Table extends React.Component{
     constructor(props) {
         super(props);
     }
@@ -34,7 +35,7 @@ export default class Table extends React.Component{
                                 {String(dot.getY().toFixed(2)) || ''}
                             </td>
                             <td>
-                                {String(dot.getR().toFixed(2)) ||''}
+                                {String(dot.getR()) ||''}
                             </td>
                             <td>
                                 {String(dot.isHit()) ||''}
@@ -46,3 +47,10 @@ export default class Table extends React.Component{
         )
     }
 }
+
+const mapStateToProps = state =>{
+    return{
+        dots: state.dotsData.dots
+    };
+};
+export default connect(mapStateToProps)(Table);

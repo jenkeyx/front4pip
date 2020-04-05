@@ -14,9 +14,9 @@ export class DotArray {
 
     add(x,y,r){
         this.#dots.push(new Dot(x,y,r));
-        while(this.#dots.length>5){
-            this.#dots.shift();
-        }
+        // while(this.#dots.length>5){
+        //     this.#dots.shift();
+        // }
     }
     getDots(){
         return this.#dots;
