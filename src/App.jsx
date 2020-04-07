@@ -7,7 +7,7 @@ import AuthContainer from "./components/AuthContainer";
 import RegistrationContainer from "./components/RegistrationContainer";
 import {ThemeProvider} from "styled-components";
 import {dark, light} from "./styles/themes";
-import {GlobalStyles} from "./styles/desktop";
+import {GlobalStyles} from "./styles/globalStyle";
 import {Redirect} from "react-router";
 
 function App(props) {
@@ -26,7 +26,7 @@ function App(props) {
         <ThemeProvider theme={theme === 'light' ? light : dark}>
             <BrowserRouter>
                 <GlobalStyles/>
-                <button id='themeButton' onClick={toggleTheme}>Toggle theme</button>
+                <button id='themeButton' className='header-btn' onClick={toggleTheme}>{theme === 'light' ? "dark": "light"}</button>
                 <Route exact path='/' component={RegistrationContainer}/>
                 <Route path='/signIn' component={AuthContainer}/>
                 <Route path='/home' component={Home}/>

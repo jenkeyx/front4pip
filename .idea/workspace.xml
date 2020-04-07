@@ -4,9 +4,15 @@
     <list default="true" id="dc205933-b750-497b-9b66-b24bb40ec484" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Canvas.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Canvas.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Form.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Form.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Registration.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Registration.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/store/auth/reducers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/auth/reducers.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/styles/Common.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/Common.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/desktop.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/desktop.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/desktop.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/globalStyle.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/sizes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/devices.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/styles/themes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/themes.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -61,16 +67,16 @@
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/components" />
-      <recent name="$PROJECT_DIR$/src" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/build" />
       <recent name="$PROJECT_DIR$/src/store/form" />
       <recent name="$PROJECT_DIR$/src/store/canvas" />
       <recent name="$PROJECT_DIR$/src/store/registration" />
       <recent name="$PROJECT_DIR$/src/store/auth" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components" />
+      <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
   <component name="RunManager" selected="npm.npm start">
@@ -128,7 +134,9 @@
       <workItem from="1585990406576" duration="1873000" />
       <workItem from="1586053757955" duration="1286000" />
       <workItem from="1586077259553" duration="39000" />
-      <workItem from="1586127118625" duration="1824000" />
+      <workItem from="1586127118625" duration="2058000" />
+      <workItem from="1586157057234" duration="812000" />
+      <workItem from="1586162820563" duration="8719000" />
     </task>
     <task id="LOCAL-00001" summary="Маршрутизация">
       <created>1584647611615</created>
@@ -270,7 +278,14 @@
       <option name="project" value="LOCAL" />
       <updated>1586077272383</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="styles">
+      <created>1586129039793</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1586129039793</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -305,7 +320,8 @@
     <MESSAGE value="some fixex final" />
     <MESSAGE value="fix update home" />
     <MESSAGE value="fix toFixed from form" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix toFixed from form" />
+    <MESSAGE value="styles" />
+    <option name="LAST_COMMIT_MESSAGE" value="styles" />
   </component>
   <component name="WindowStateProjectService">
     <state x="440" y="190" key="#ESLint" timestamp="1584557452932">
@@ -334,8 +350,8 @@
     <state x="495" y="224" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1440.823@0.23.1440.823" timestamp="1585428249127" />
     <state x="495" y="224" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1440.825@0.23.1440.825" timestamp="1585501079528" />
     <state x="578" y="258" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1680.963@0.23.1680.963" timestamp="1582807448570" />
-    <state x="476" y="56" key="CommitChangelistDialog2" timestamp="1586077272186">
-      <screen x="0" y="23" width="1440" height="829" />
+    <state x="476" y="56" key="CommitChangelistDialog2" timestamp="1586129039448">
+      <screen x="0" y="23" width="1440" height="828" />
     </state>
     <state x="476" y="105" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1586070602469" />
     <state x="423" y="127" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1584643590214" />
@@ -343,7 +359,7 @@
     <state x="456" y="51" key="CommitChangelistDialog2/0.23.1440.823@0.23.1440.823" timestamp="1585397676837" />
     <state x="476" y="51" key="CommitChangelistDialog2/0.23.1440.825@0.23.1440.825" timestamp="1585522120577" />
     <state x="476" y="54" key="CommitChangelistDialog2/0.23.1440.826@0.23.1440.826" timestamp="1584659510790" />
-    <state x="476" y="56" key="CommitChangelistDialog2/0.23.1440.828@0.23.1440.828" timestamp="1586071301436" />
+    <state x="476" y="56" key="CommitChangelistDialog2/0.23.1440.828@0.23.1440.828" timestamp="1586129039448" />
     <state x="476" y="56" key="CommitChangelistDialog2/0.23.1440.829@0.23.1440.829" timestamp="1586077272186" />
     <state x="555" y="55" key="CommitChangelistDialog2/0.23.1680.963@0.23.1680.963" timestamp="1585249406621" />
     <state x="100" y="101" width="1240" height="700" key="DiffContextDialog" timestamp="1586077281104">
@@ -383,20 +399,23 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="717" y="449" key="VCS.EditChangelistDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1584642002300" />
-    <state x="320" y="198" key="Vcs.Push.Dialog.v2" timestamp="1586077282539">
-      <screen x="0" y="23" width="1440" height="829" />
+    <state x="320" y="198" key="Vcs.Push.Dialog.v2" timestamp="1586129048585">
+      <screen x="0" y="23" width="1440" height="828" />
     </state>
     <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1586070605758" />
     <state x="320" y="196" key="Vcs.Push.Dialog.v2/0.23.1440.822@0.23.1440.822" timestamp="1585274097803" />
     <state x="320" y="197" key="Vcs.Push.Dialog.v2/0.23.1440.823@0.23.1440.823" timestamp="1585397684358" />
     <state x="320" y="197" key="Vcs.Push.Dialog.v2/0.23.1440.825@0.23.1440.825" timestamp="1585522125889" />
     <state x="320" y="197" key="Vcs.Push.Dialog.v2/0.23.1440.826@0.23.1440.826" timestamp="1584659516053" />
+    <state x="320" y="198" key="Vcs.Push.Dialog.v2/0.23.1440.828@0.23.1440.828" timestamp="1586129048585" />
     <state x="320" y="198" key="Vcs.Push.Dialog.v2/0.23.1440.829@0.23.1440.829" timestamp="1586077282539" />
-    <state x="770" y="265" key="com.intellij.ide.util.TipDialog" timestamp="1586127118831">
-      <screen x="0" y="23" width="1440" height="825" />
+    <state x="770" y="266" key="com.intellij.ide.util.TipDialog" timestamp="1586163352121">
+      <screen x="0" y="23" width="1440" height="827" />
     </state>
     <state x="770" y="265" key="com.intellij.ide.util.TipDialog/0.23.1440.825@0.23.1440.825" timestamp="1586127118831" />
     <state x="770" y="280" key="com.intellij.ide.util.TipDialog/0.23.1440.826@0.23.1440.826" timestamp="1586053781046" />
+    <state x="770" y="266" key="com.intellij.ide.util.TipDialog/0.23.1440.827@0.23.1440.827" timestamp="1586163352121" />
+    <state x="770" y="266" key="com.intellij.ide.util.TipDialog/0.23.1440.828@0.23.1440.828" timestamp="1586157057217" />
     <state x="498" y="147" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1584557199810">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>

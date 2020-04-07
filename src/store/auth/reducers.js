@@ -4,7 +4,7 @@ const initialState = {
     username: '',
     password: '',
     repeatPassword: '',
-    authStatus: false
+    authStatus: true
 };
 
 export const authReducer = (state = initialState,action) =>{

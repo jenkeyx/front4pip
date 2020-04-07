@@ -1,5 +1,5 @@
 import React from "react";
-import {Link} from "react-router-dom";
+import {Link, Redirect} from "react-router-dom";
 export default function Header(props) {
 
     return(
@@ -13,8 +13,8 @@ export default function Header(props) {
 
             {!(props.authStatus) &&
             <div>
-                <Link to={'/signIn'}>Sign in </Link>
-                <Link to={'/'}>Sign up</Link>
+                <button className='header-btn'><Link to={'/signIn'}>Sign in </Link></button>
+                <button className='header-btn'><Link to={'/'}>Sign up</Link></button>
 
             </div>
             }

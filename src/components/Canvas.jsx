@@ -4,9 +4,9 @@ import {DotArray} from "../classes/DotArray";
 
 export function drawGraphic(radius, canvas) {
     let c = canvas.getContext("2d");
-    let width = 400;
-    let height = 400;
-    let stockRadius = 60;
+    let width = canvas.width;
+    let height = canvas.height;
+    let stockRadius = width/6;
     let shiftRadius = radius * stockRadius;
     c.clearRect(0, 0, width, height);
 

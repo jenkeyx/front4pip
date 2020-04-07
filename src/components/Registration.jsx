@@ -47,7 +47,7 @@ export default class Registration extends React.Component{
 
     render() {
         return(
-            <div>
+            <div className="reg-wrapper">
                 <Header authStatus={this.props.authStatus}/>
                 <form className="registration">
                     <h3>Sign Up</h3>

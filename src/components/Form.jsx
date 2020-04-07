@@ -173,7 +173,8 @@ export default class Form extends React.Component {
                     </canvas>
                 </div>
                 <form>
-                    <label>
+                    <div id="dataForm">
+                        <label >
                         X:
                         <select id="xInput" value={this.props.x} onChange={this.onChangeX}>
                             <option value="-5">-5</option>
@@ -213,6 +214,7 @@ export default class Form extends React.Component {
                             {this.props.r ? ' ' : 'Radius is not selected'}
                         </div>
                     </label>
+                    </div>
                     <ErrorMsg style={{color: 'red'}}/><br/>
                     <button type="button" onClick={this.onSubmitForm}>
                         Check
