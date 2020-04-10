@@ -14,8 +14,6 @@ export const GlobalStyles = createGlobalStyle`
   .header-btn{
     background: ${({ theme }) => theme.body};
     color: ${({ theme }) => theme.text};
-    width: 60px;
-    height: 30px;
   }
   #root {
     align-items: center;
